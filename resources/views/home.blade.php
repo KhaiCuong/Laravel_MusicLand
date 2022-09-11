@@ -552,8 +552,8 @@
 
 
                 <div style="display: flex; height:100%; align-items: center; justify-content: flex-end; font-size: 20px;  width: 30%; ">
-                    <i class="far fa-heart" style="margin-right: 12px;"></i>
-                    <i class="fas fa-long-arrow-alt-down" style="margin-right: 12px;"></i>
+                    <i class="far fa-heart" style="margin-right: 20px;"></i>
+                    <i class="fas fa-long-arrow-alt-down" style="margin-right: 20px;"></i>
                     <i class="far fa-share-square"></i>
                 </div>
 
