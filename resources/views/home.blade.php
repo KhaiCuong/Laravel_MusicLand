@@ -18,6 +18,8 @@
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+
     <!-- Libraries Stylesheet -->
     <link href="{{ asset('lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
 
@@ -50,6 +52,7 @@
     <!-- Topbar Start -->
     <div class="row bg-color">
 
+
         <!-- Duong Khai Cuong -->
 
         <div class="col-lg-2" style="background-color:#1e0022; padding-right:0;">
@@ -71,7 +74,7 @@
                         </li>
                         <li class="direct-item">
                             <i class="fas fa-heart direct-icon "></i>
-                            <a href="/admin.blade.php" class="text-decoration-none direct-link-2"> My Libarite</a>
+                            <a href="/admin.blade.php" class="text-decoration-none direct-link-2"> My Library</a>
                         </li>
 
                     </ul>
@@ -200,10 +203,8 @@
                     </div>
                 </div> -->
             </div>
-            <!-- Featured End -->
 
 
-            <!-- Categories Start -->
             <div>
                 <div class="pl-5 m-3 mb-4" style="display: flex;justify-content: space-between;  align-items: center;  ">
                     <h2 class="new-music-title mb-0">Fresh new music</h2>
@@ -326,74 +327,74 @@
                 </div>
                 <div class="row px-xl-5 pb-3 mt-3" style="display: flex; justify-content: space-around;">
                     <div class="col-lg-2 col-md-6 pb-1">
-                        <a href="" class="cat-img position-relative overflow-hidden mb-3" style=" width:100% ;"> 
-                            <img class="img-fluid" src="img/product-3.jpg" style="height: 220px;  width:100% ; object-fit: fill;"  alt="">
+                        <a href="" class="cat-img position-relative overflow-hidden mb-3" style=" width:100% ;">
+                            <img class="img-fluid" src="img/product-3.jpg" style="height: 220px;  width:100% ; object-fit: fill;" alt="">
                         </a>
                         <h5 class=" pt-2 pb-2" style="color: white; background-color: rgba(180, 169, 169, 0.4); ">Music </h5>
                     </div>
                     <div class="col-lg-2 col-md-6 pb-1">
-                        <a href="" class="cat-img position-relative overflow-hidden mb-3" style=" width:100% ;"> 
-                            <img class="img-fluid" src="img/product-3.jpg" style="height: 220px;  width:100% ; object-fit: fill;"  alt="">
+                        <a href="" class="cat-img position-relative overflow-hidden mb-3" style=" width:100% ;">
+                            <img class="img-fluid" src="img/product-3.jpg" style="height: 220px;  width:100% ; object-fit: fill;" alt="">
                         </a>
                         <h5 class=" pt-2 pb-2" style="color: white; background-color: rgba(180, 169, 169, 0.4); ">Music </h5>
                     </div>
                     <div class="col-lg-2 col-md-6 pb-1">
-                        <a href="" class="cat-img position-relative overflow-hidden mb-3" style=" width:100% ;"> 
-                            <img class="img-fluid" src="img/product-3.jpg" style="height: 220px;  width:100% ; object-fit: fill;"  alt="">
+                        <a href="" class="cat-img position-relative overflow-hidden mb-3" style=" width:100% ;">
+                            <img class="img-fluid" src="img/product-3.jpg" style="height: 220px;  width:100% ; object-fit: fill;" alt="">
                         </a>
                         <h5 class=" pt-2 pb-2" style="color: white; background-color: rgba(180, 169, 169, 0.4); ">Music </h5>
                     </div>
                     <div class="col-lg-2 col-md-6 pb-1">
-                        <a href="" class="cat-img position-relative overflow-hidden mb-3" style=" width:100% ;"> 
-                            <img class="img-fluid" src="img/product-3.jpg" style="height: 220px;  width:100% ; object-fit: fill;"  alt="">
+                        <a href="" class="cat-img position-relative overflow-hidden mb-3" style=" width:100% ;">
+                            <img class="img-fluid" src="img/product-3.jpg" style="height: 220px;  width:100% ; object-fit: fill;" alt="">
                         </a>
                         <h5 class=" pt-2 pb-2" style="color: white; background-color: rgba(180, 169, 169, 0.4); ">Music </h5>
                     </div>
                     <div class="col-lg-2 col-md-6 pb-1">
-                        <a href="" class="cat-img position-relative overflow-hidden mb-3" style=" width:100% ;"> 
-                            <img class="img-fluid" src="img/product-3.jpg" style="height: 220px;  width:100% ; object-fit: fill;"  alt="">
+                        <a href="" class="cat-img position-relative overflow-hidden mb-3" style=" width:100% ;">
+                            <img class="img-fluid" src="img/product-3.jpg" style="height: 220px;  width:100% ; object-fit: fill;" alt="">
                         </a>
                         <h5 class=" pt-2 pb-2" style="color: white; background-color: rgba(180, 169, 169, 0.4); ">Music </h5>
                     </div>
                     <div class="col-lg-2 col-md-6 pb-1">
-                        <a href="" class="cat-img position-relative overflow-hidden mb-3" style=" width:100% ;"> 
-                            <img class="img-fluid" src="img/product-3.jpg" style="height: 220px;  width:100% ; object-fit: fill;"  alt="">
+                        <a href="" class="cat-img position-relative overflow-hidden mb-3" style=" width:100% ;">
+                            <img class="img-fluid" src="img/product-3.jpg" style="height: 220px;  width:100% ; object-fit: fill;" alt="">
                         </a>
                         <h5 class=" pt-2 pb-2" style="color: white; background-color: rgba(180, 169, 169, 0.4); ">Music </h5>
                     </div>
                     <div class="col-lg-2 col-md-6 pb-1">
-                        <a href="" class="cat-img position-relative overflow-hidden mb-3" style=" width:100% ;"> 
-                            <img class="img-fluid" src="img/product-3.jpg" style="height: 220px;  width:100% ; object-fit: fill;"  alt="">
+                        <a href="" class="cat-img position-relative overflow-hidden mb-3" style=" width:100% ;">
+                            <img class="img-fluid" src="img/product-3.jpg" style="height: 220px;  width:100% ; object-fit: fill;" alt="">
                         </a>
                         <h5 class=" pt-2 pb-2" style="color: white; background-color: rgba(180, 169, 169, 0.4); ">Music </h5>
                     </div>
                     <div class="col-lg-2 col-md-6 pb-1">
-                        <a href="" class="cat-img position-relative overflow-hidden mb-3" style=" width:100% ;"> 
-                            <img class="img-fluid" src="img/product-3.jpg" style="height: 220px;  width:100% ; object-fit: fill;"  alt="">
+                        <a href="" class="cat-img position-relative overflow-hidden mb-3" style=" width:100% ;">
+                            <img class="img-fluid" src="img/product-3.jpg" style="height: 220px;  width:100% ; object-fit: fill;" alt="">
                         </a>
                         <h5 class=" pt-2 pb-2" style="color: white; background-color: rgba(180, 169, 169, 0.4); ">Music </h5>
                     </div>
                     <div class="col-lg-2 col-md-6 pb-1">
-                        <a href="" class="cat-img position-relative overflow-hidden mb-3" style=" width:100% ;"> 
-                            <img class="img-fluid" src="img/product-3.jpg" style="height: 220px;  width:100% ; object-fit: fill;"  alt="">
+                        <a href="" class="cat-img position-relative overflow-hidden mb-3" style=" width:100% ;">
+                            <img class="img-fluid" src="img/product-3.jpg" style="height: 220px;  width:100% ; object-fit: fill;" alt="">
                         </a>
                         <h5 class=" pt-2 pb-2" style="color: white; background-color: rgba(180, 169, 169, 0.4); ">Music </h5>
                     </div>
                     <div class="col-lg-2 col-md-6 pb-1">
-                        <a href="" class="cat-img position-relative overflow-hidden mb-3" style=" width:100% ;"> 
-                            <img class="img-fluid" src="img/product-3.jpg" style="height: 220px;  width:100% ; object-fit: fill;"  alt="">
+                        <a href="" class="cat-img position-relative overflow-hidden mb-3" style=" width:100% ;">
+                            <img class="img-fluid" src="img/product-3.jpg" style="height: 220px;  width:100% ; object-fit: fill;" alt="">
                         </a>
                         <h5 class=" pt-2 pb-2" style="color: white; background-color: rgba(180, 169, 169, 0.4); ">Music </h5>
                     </div>
                     <div class="col-lg-2 col-md-6 pb-1">
-                        <a href="" class="cat-img position-relative overflow-hidden mb-3" style=" width:100% ;"> 
-                            <img class="img-fluid" src="img/product-3.jpg" style="height: 220px;  width:100% ; object-fit: fill;"  alt="">
+                        <a href="" class="cat-img position-relative overflow-hidden mb-3" style=" width:100% ;">
+                            <img class="img-fluid" src="img/product-3.jpg" style="height: 220px;  width:100% ; object-fit: fill;" alt="">
                         </a>
                         <h5 class=" pt-2 pb-2" style="color: white; background-color: rgba(180, 169, 169, 0.4); ">Music </h5>
                     </div>
                     <div class="col-lg-2 col-md-6 pb-1">
-                        <a href="" class="cat-img position-relative overflow-hidden mb-3" style=" width:100% ;"> 
-                            <img class="img-fluid" src="img/product-3.jpg" style="height: 220px;  width:100% ; object-fit: fill;"  alt="">
+                        <a href="" class="cat-img position-relative overflow-hidden mb-3" style=" width:100% ;">
+                            <img class="img-fluid" src="img/product-3.jpg" style="height: 220px;  width:100% ; object-fit: fill;" alt="">
                         </a>
                         <h5 class=" pt-2 pb-2" style="color: white; background-color: rgba(180, 169, 169, 0.4); ">Music </h5>
                     </div>
@@ -401,10 +402,10 @@
 
 
                 </div>
+            </div>
 
 
-
-
+            <div>
                 <!-- Vendor Start -->
                 <div class=" py-5">
                     <div class="row px-xl-5">
@@ -512,28 +513,158 @@
 
             </div>
 
+
+
         </div>
 
 
+        <div class="align-items-center py-3 top-bar" style="background-color: rgba(0, 0, 0, 0.9);z-index:100; height: 100px; top:0;  position: sticky; left:0 ; bottom: 0; width:100%;">
 
 
 
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+            <div style="display: flex; margin: 0 34px; justify-content: space-between; align-items: center; width:100%; ">
+                <div style="display: flex; height:100%; align-items: center; width: 30%; ">
+                    <img src="img/vendor-8.jpg" alt="song img" style="width: 50px; height: auto; margin-right: 10px;">
+                    <p style="margin-bottom: 0; margin-right: 8px; color: white; font-weight: bold;">Music Name</p>
+                    <p style="margin-bottom: 0; margin-right: 8px; color: white;">-</p>
+                    <p style="margin-bottom: 0; color: white; font-size:12px"> Artis Name</p>
+                </div>
 
 
-        <!-- JavaScript Libraries -->
-        <script src=" {{ asset('https://code.jquery.com/jquery-3.4.1.min.js') }}"></script>
-        <script src="{{ asset('https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js ') }}"></script>
-        <script src="{{ asset('lib/easing/easing.min.js') }}"></script>
-        <script src="{{ asset('lib/owlcarousel/owl.carousel.min.js') }}"></script>
+                <div id="content" style="height: 60px; width:50%; position:relative">
+                    <div id="range">
+                        <input type="range" id="range-val" value="46" min="0" max="143">
 
-        <!-- Contact Javascript File -->
-        <script src="mail/jqBootstrapValidation.min.js"></script>
-        <script src="mail/contact.js"></script>
+                    </div>
+                    <div id="time">
+                        <p>0:46</p>
+                    </div>
+                    <div id="buttons">
+                        <i class="fa fa-step-backward fa-3x" style="padding-left: 0;"></i>
+                        <i class="fa fa-pause fa-3x step"></i>
+                        <i class="fa fa-step-forward fa-3x"></i>
+                    </div>
+                    <div id="total-time">
+                        <p>2:23</p>
+                    </div>
+                </div>
 
-        <!-- Template Javascript -->
-        <script src="{{ asset('js/main.js') }}"></script>
+
+
+                <div style="display: flex; height:100%; align-items: center; justify-content: flex-end; font-size: 20px;  width: 30%; ">
+                    <i class="far fa-heart" style="margin-right: 12px;"></i>
+                    <i class="fas fa-long-arrow-alt-down" style="margin-right: 12px;"></i>
+                    <i class="far fa-share-square"></i>
+                </div>
+
+            </div>
+
+
+            <!-- <div style="width: 100%; height: auto;">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+            <div id="overlay"></div>
+            <header>
+                <div id="menu-bar">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div id="song-info">
+                    <h1>Song name</h1>
+                    <p>Song artist</p>
+                </div>
+                <div id="search">
+                    <i class="fa fa-search fa-2x"></i>
+                </div>
+            </header>
+           
+            <footer>
+                <div id="repeat">
+                    <i class="fa fa-repeat"></i>
+                </div>
+                <div id="random">
+                    <i class="fa fa-random"></i>
+                </div>
+            </footer> -->
+
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <script>
+        $(document).ready(function() {
+            $('#range-val').on("change mousemove", function() {
+                //Lets change it in time mode
+                var original_time = $(this).val();
+                var new_time = formatSeconds(original_time);
+                $("#time p").text(new_time);
+            });
+            /*
+            ANOTHER GREAT WORK BY SOMEONE...
+            http://jsfiddle.net/CYSeY/4/
+            i just modify it
+            */
+            var r = document.getElementById('range-val');
+            var max = r.getAttribute('max');
+            var min = r.getAttribute('min');
+            var w = r.clientWidth;
+            //w += r.offsetLeft;
+            var isDragging = false;
+
+            var moveTip = (function(e) {
+                if (isDragging) {
+                    var posPerc = (r.value / max) * 100;
+                    var pixPos = (posPerc / 100) * w - 40;
+                    /* pixPos += r.offsetLeft;*/
+
+                    document.getElementById('tip').style.display = 'block';
+                    document.getElementById('tip').style.left = pixPos + 'px';
+                }
+            });
+
+            $("#range-val").mousemove(function() {
+                isDragging = true;
+                var range_val = document.getElementById("range-val").value;
+                document.getElementById('tip').innerHTML = formatSeconds(range_val);
+                r.addEventListener('mousemove', moveTip, false);
+            });
+
+            $("body").mouseup(function(e) {
+                isDragging = false;
+                r.removeEventListener('mousemove', moveTip);
+                document.getElementById('tip').style.display = 'none';
+            });
+        });
+        /*
+        FUNCTIONS (I just modify it)
+        http://stackoverflow.com/a/17781037
+        */
+        function formatSeconds(seconds) {
+            var date = new Date(1970, 0, 1);
+            date.setSeconds(seconds);
+            return date.toTimeString().replace(/.*(\d{2}:\d{2}).*/, "$1");
+        }
+    </script>
+
+
+    <!-- JavaScript Libraries -->
+    <script src=" {{ asset('https://code.jquery.com/jquery-3.4.1.min.js') }}"></script>
+    <script src="{{ asset('https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js ') }}"></script>
+    <script src="{{ asset('lib/easing/easing.min.js') }}"></script>
+    <script src="{{ asset('lib/owlcarousel/owl.carousel.min.js') }}"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="{{ asset('js/main.js') }}"></script>
 </body>
 
 </html>

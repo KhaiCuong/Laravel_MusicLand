@@ -21,3 +21,20 @@ Route::get('/', function () {
 Route::get('/admin', function () {
     return view('admins.admin');
 });
+
+
+Route::get('/l', function () {
+    return view('mylibrary');
+});
+
+Route::get('/p', function () {
+    return view('playlist');
+});
+
+Route::get('/lg', function () {
+    return view('login');
+});
+
+Route::get('/register', function () {
+    return view('register');
+});

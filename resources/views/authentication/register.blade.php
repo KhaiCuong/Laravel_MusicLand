@@ -64,22 +64,15 @@
                     </a>
                 </div>
                 <div class=" mt-5" style="padding-left:0;">
-                    <div class="web-name" style="margin-left:20px; font-size:24px ; color: white; ">
-                        ADMIN
-                        <hr style="background-color: white; margin-left: 14px; margin-right: 14px">
-                    </div>
                     <ul class="direct-list">
                         <li class="direct-item">
-                            <i class="fa fa-music direct-icon"></i>
-                            <a href="" class="text-decoration-none direct-link-1"> Manage Music</a>
+
+                            <i class="fas fa-sign-in-alt direct-icon"></i>
+                            <a href="" class="text-decoration-none direct-link-1">Login</a>
                         </li>
                         <li class="direct-item">
-                            <i class="fas fa-user-plus direct-icon"></i>
-                            <a href="" class="text-decoration-none direct-link-2"> Manage User</a>
-                        </li>
-                        <li class="direct-item">
-                            <i class="fas fa-id-card-alt  direct-icon"></i>
-                            <a href="" class="text-decoration-none direct-link-3"> Manage Order</a>
+                            <i class="fas fa-file-signature direct-icon "></i>
+                            <a href="/admin.blade.php" class="text-decoration-none direct-link-2"> Register</a>
                         </li>
 
                     </ul>
@@ -136,28 +129,60 @@
             <div class=" mt-0" style="padding-left: 0px; ">
                 <div class=" offer pt-5">
                     <div class="pl-5 m-3 mb-4 ">
-                        <i class="fa fa-music direct-icon" style='font-size:36px'> Manage Music</i>
+
                         <h2 class="new-music-title mb-0"></h2>
 
-                        <div style="display: flex; justify-content: flex-end; margin: 10px 50px 20px 0;">
-                            <a href="" class="btn btn-outline-primary py-md-2 px-md-3" style="background-color: black; ">add new</a>
-                        </div>
+
                     </div>
-                    <div class="nav-section header-sticky" style="margin-left: 40px; margin-right: 40px; background-color:black; color:white;">
-                        <div class="header-nav-section">
-                            <div class="container">
-                                <ul class="nav menu-nav clone-main-menu" style=" color:white; display:flex; justify-content: space-between; align-items: center;" data-menuname="Sale Info">
-                                    <li class="menu-item"><a href="#" class="link-term" style='font-size:24px'>Photo</a></li>
-                                    <li class="menu-item"><a href="#" class="link-term" style='font-size:24px'>Title</a></li>
-                                    <li class="menu-item"><a href="#" class="link-term" style='font-size:24px'>Category</a></li>
-                                    <li class="menu-item"><a href="#" class="link-term" style='font-size:24px'>Album</a></li>
-                                    <li class="menu-item"><a href="#" class="link-term" style='font-size:24px'>Action</a></li>
-                                </ul>
+                    <div class="nav-section header-sticky" style="display: flex; justify-content: space-around; margin: 10px 50px 20px 0;margin-left: 40px; margin-right: 40px;">
+                        <div class="row">
+                            <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 col-md-offset-3">
+                                <div class=" main-content-area">
+                                    <div class="wrap-login-item ">
+                                        <div class="login-form form-item form-stl" style="width: 800px; height:auto">
+                                            <form name="frm-login" action="" method="POST">
+
+                                                <fieldset class="wrap-title">
+                                                    <h1 class="form-title" style="color: white; width:100%; "> Register </h1>
+                                                </fieldset>
+                                                <fieldset class="wrap-input mt-1">
+                                                    <label for="frm-login-uname" style="width:25%">Name:</label>
+                                                    <input type="text" id="frm-login-uname" style="color: white; width:60%" name="name" placeholder="Type your Name">
+                                                </fieldset>
+                                                <fieldset class="wrap-input mt-1">
+                                                    <label for="frm-login-uname" style="width:25%">Email Address:</label>
+                                                    <input type="text" id="frm-login-uname" style="color: white; width:60%" name="email" placeholder="Type your email address">
+                                                </fieldset>
+                                                <fieldset class="wrap-inpu mt-1">
+                                                    <label for="frm-login-pass" style="width:25%">Password:</label>
+                                                    <input type="password" id="frm-login-pass" style="color: white; width:60%" name="password" placeholder="************">
+                                                </fieldset>
+                                                <fieldset class="wrap-input mt-1">
+                                                    <label for="frm-login-uname" style="width:25%">Phone:</label>
+                                                    <input type="text" id="frm-login-uname" style="color: white; width:60%" name="phone" placeholder="Type your Phone Number">
+                                                </fieldset>
+                                                <fieldset class="wrap-input mt-1">
+                                                    <label for="frm-login-uname" style="width:25%">Credit card:</label>
+                                                    <input type="text" id="frm-login-uname" style="color: white; width:60%" name="credit-card" placeholder="Type your Credit card Number">
+                                                </fieldset>
+
+                                               
+                                                <div  style=" width:100%; text-align: center; " class="mt-4">
+                                                <input type="submit" style="color: white; background-color: purple" class="btn btn-submit" value="Register" name="register">
+
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
+
         </div>
 
     </div>
