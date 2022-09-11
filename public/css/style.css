@@ -23,6 +23,23 @@
   padding-bottom: 60px;
   background: #eff6fa
 }
+.wrap-newletter-footer .btn-submit{
+  display: inline-block;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+  text-transform: capitalize;
+  border: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #ffffff;
+  padding: 11.5px 19.1px;
+  background-color: red;
+}
+.wrap-newletter-footer .btn-submit:hover{
+  background: #222222;
+}
 
 .bbb_main_container{
       background-color: #fff;

@@ -21,3 +21,8 @@ Route::get('/', function () {
 Route::get('/admin', function () {
     return view('admins.admin');
 });
+
+Route::get('/login', function () {
+    return view('admins.login');
+});
+Route::post('/login', [AuthenticationController::class, 'processLogin'])->name('processLogin');

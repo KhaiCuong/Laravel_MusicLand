@@ -71,7 +71,7 @@
                         </li>
                         <li class="direct-item">
                             <i class="fas fa-heart direct-icon "></i>
-                            <a href="/admin.blade.php" class="text-decoration-none direct-link-2"> My Libarite</a>
+                            <a href="/admin.blade.php" class="text-decoration-none direct-link-2"> My Library</a>
                         </li>
 
                     </ul>
