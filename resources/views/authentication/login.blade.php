@@ -141,17 +141,17 @@
                                     <div class="wrap-login-item ">
                                         <div class="login-form form-item form-stl" style="width: 800px; height:auto">
                                             <form name="frm-login" action="" method="POST">
-
+                                            @csrf        
                                                 <fieldset class="wrap-title">
                                                     <h1 class="form-title" style="color: white; width:100%; "> LOGIN </h1>
                                                 </fieldset>
                                                 <fieldset class="wrap-input mt-3">
                                                     <label for="frm-login-uname" style="width:25%">Email Address:</label>
-                                                    <input type="text" id="frm-login-uname" style="color: white; width:60%" name="email" placeholder="Type your email address">
+                                                    <input type="text" id="frm-login-uname" style="color: black; width:60%" name="email" placeholder="Type your email address">
                                                 </fieldset>
                                                 <fieldset class="wrap-inpu mt-3t">
                                                     <label for="frm-login-pass" style="width:25%">Password:</label>
-                                                    <input type="password" id="frm-login-pass" style="color: white; width:60%" name="password" placeholder="************">
+                                                    <input type="password" id="frm-login-pass" style="color: black; width:60%" name="password" placeholder="************">
                                                 </fieldset>
 
                                                 <fieldset class="wrap-input mt-3 mt-3" style="display: flex; justify-content: space-between; width:85%">
@@ -227,3 +227,10 @@
 </body>
 
 </html>
+
+
+
+@section('myjs')
+
+
+@endsection

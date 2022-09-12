@@ -618,8 +618,9 @@
                 <div id="content" style="height: 60px; width:50%; position:relative">
                     <div id="range">
                         <input type="range" id="range-val" value="46" min="0" max="143">
-
+                        <!-- <div id='tip'>Some tip</div> -->
                     </div>
+
                     <div id="time">
                         <p>0:46</p>
                     </div>

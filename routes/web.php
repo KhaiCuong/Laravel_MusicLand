@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthenticationController;
 
+use App\Http\Controllers\RegisterController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
 
 
 Route::get('/admin', function () {
@@ -37,11 +39,17 @@ Route::get('/p', function () {
     return view('playlist');
 });
 
-Route::get('/lg', function () {
-    return view('login');
-});
+Route::get('/login', [AuthenticationController::class, 'login'])->name('login');
 
-Route::get('/register', function () {
-    return view('register');
-});
+Route::post('/login', [AuthenticationController::class, 'processLogin'])->name('processLogin');
+
+
+
+Route::resource('/register', RegisterController::class);
+
+
+
+
+
+
 

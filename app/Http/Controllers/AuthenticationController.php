@@ -7,6 +7,9 @@ use Sentinel;
 
 class AuthenticationController extends Controller
 {
+
+
+
     public function login()
     {
         // $credentials = [
@@ -15,7 +18,11 @@ class AuthenticationController extends Controller
         // ];
         // $user = Sentinel::registerAndActivate($credentials);
 
+
         return view('admins.login');
+
+        return view('authentication.login');
+
     }
 
     public function processLogin(Request $request)
@@ -27,6 +34,7 @@ class AuthenticationController extends Controller
         if ($user = Sentinel::authenticate($credentials)) {
             $user = Sentinel::getUser();
             $role = Sentinel::getRoleRepository()->findBySlug('admin');
+
             if(!$user->inRole($role)){
                 return redirect()->route('layout.home');
             } else {
@@ -36,6 +44,20 @@ class AuthenticationController extends Controller
         } else {
             // wrong username or password
             return view('admins.login');
+
+            if (!$user->inRole($role)) {
+                return redirect()->route('home');
+            }
+            // } else {
+            //     return redirect()->route('admin.index');
+            // }
+
+        else {
+            // wrong username or password
+            return view('authentication.login');
+
         }
+     
     }
+}
 }
