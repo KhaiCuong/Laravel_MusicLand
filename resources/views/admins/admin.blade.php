@@ -64,10 +64,10 @@
                     </a>
                 </div>
                 <div class=" mt-5" style="padding-left:0;">
-                <div class="web-name" style="margin-left:20px; font-size:24px ; color: white; ">
-                    ADMIN
-                    <hr style="background-color: white; margin-left: 14px; margin-right: 14px">
-                </div>
+                    <div class="web-name" style="margin-left:20px; font-size:24px ; color: white; ">
+                        ADMIN
+                        <hr style="background-color: white; margin-left: 14px; margin-right: 14px">
+                    </div>
                     <ul class="direct-list">
                         <li class="direct-item">
                             <i class="fa fa-music direct-icon"></i>
@@ -78,7 +78,7 @@
                             <a href="" class="text-decoration-none direct-link-2"> Manage User</a>
                         </li>
                         <li class="direct-item">
-                        <i class="fas fa-id-card-alt  direct-icon"></i>
+                            <i class="fas fa-id-card-alt  direct-icon"></i>
                             <a href="" class="text-decoration-none direct-link-3"> Manage Order</a>
                         </li>
 
@@ -105,8 +105,8 @@
                         </div>
                     </form>
                 </div>
-             
-       
+
+
                 <div class="login">
                     <img src="img/acc1.jpg" alt="img" class="account-img">
 
@@ -138,7 +138,7 @@
                     <div class="pl-5 m-3 mb-4 ">
                         <i class="fa fa-music direct-icon" style='font-size:36px'> Manage Music</i>
                         <h2 class="new-music-title mb-0"></h2>
-                         
+
                         <div style="display: flex; justify-content: flex-end; margin: 10px 50px 20px 0;">
                             <a href="" class="btn btn-outline-primary py-md-2 px-md-3" style="background-color: black; ">add new</a>
                         </div>
@@ -147,41 +147,17 @@
                         <div class="header-nav-section">
                             <div class="container">
                                 <ul class="nav menu-nav clone-main-menu" style=" color:white; display:flex; justify-content: space-between; align-items: center;" data-menuname="Sale Info">
-                                    <li class="menu-item" ><a href="#" class="link-term" style='font-size:24px'>Photo</a></li>
-                                    <li class="menu-item" ><a href="#" class="link-term" style='font-size:24px'>Title</a></li>
-                                    <li class="menu-item" ><a href="#" class="link-term" style='font-size:24px'>Category</a></li>
-                                    <li class="menu-item" ><a href="#" class="link-term" style='font-size:24px'>Album</a></li>
-                                    <li class="menu-item" ><a href="#" class="link-term" style='font-size:24px'>Action</a></li>
+                                    <li class="menu-item"><a href="#" class="link-term" style='font-size:24px'>Photo</a></li>
+                                    <li class="menu-item"><a href="#" class="link-term" style='font-size:24px'>Title</a></li>
+                                    <li class="menu-item"><a href="#" class="link-term" style='font-size:24px'>Category</a></li>
+                                    <li class="menu-item"><a href="#" class="link-term" style='font-size:24px'>Album</a></li>
+                                    <li class="menu-item"><a href="#" class="link-term" style='font-size:24px'>Action</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             </div>
-
         </div>
 
     </div>
