@@ -222,12 +222,12 @@
                     <h2 class="new-music-title mb-0">Fresh new music</h2>
                     <p style="font-size: 20px ; font-weight: 600; margin: 0 14px 0 0 ;"> See all</p>
                 </div>
-                <div class="row px-xl-5 pb-3 mt-3" style="display: flex; justify-content: space-around;">
+                <div id="song-1" class="row px-xl-5 pb-3 mt-3" style="display: flex; justify-content: space-around;">
                     <div class="col-lg-2 col-md-6 pb-1">
-                        <a href="" class="cat-img position-relative overflow-hidden mb-3 border-radius-6">
-                            <img class="img-fluid border-radius-6" src="img/song-1.jpg" alt="">
-
-                        </a>
+                        
+                            <img id="startOrStopImg" class="img-fluid border-radius-6" src="img/song-1.jpg" onclick="StartOrStop('audio/song-1.mp3')" alt="Play Button">
+                            <audio id="myAudio" type></audio>
+                        
                         <h5 class=" mt-2 " style="color: white;">Song 1 </h5>
                     </div>
                     <div class="col-lg-2 col-md-6 pb-1">
@@ -257,9 +257,10 @@
                         </a>
                         <h5 class=" mt-2 " style="color: white;">Music </h5>
                     </div>
+                    <script src="{{ asset('carousel/js/main.js') }}"></script>
                 </div>
 
-
+                
 
 
                 <div class=" offer pt-5">
@@ -638,25 +639,16 @@
                     </div>
                 </div>
                 <audio id="myAudio">
-                    <source src="audio/song-1.ogg" type="audio/ogg">
-                    <source src="audio/song-1.mp3" type="audio/mpeg">
+                                        
                 </audio>
 
 
 
 
                 <script>
-                    const wrapper = document.querySelector(".wrapper"),
-                        playPauseBtn = wrapper.querySelector(".play-pause");
-
-
-
-
-                    window.addEventListener("load", () => {
+                    window.addEventListener("load",() =>{
                         loadMusic(allMusic);
-
                     });
-
 
                     var x = document.getElementById("myAudio");
 
@@ -667,8 +659,6 @@
                     function pauseAudio() {
                         x.pause();
                     }
-
-
 
                     playPauseBtn.addEventListener("click", () => {
                         const isMusicPlay = wrapper.classList.contains("paused");

@@ -24,11 +24,17 @@ Route::get('/admin', function () {
     return view('admins.admin');
 });
 
-
-Route::get('/login', function () {
-    return view('admins.login');
+Route::get('/order', function () {
+    return view('admins.manageorder');
 });
-Route::post('/login', [AuthenticationController::class, 'processLogin'])->name('processLogin');
+
+Route::get('/manageuser', function () {
+    return view('admins.manageuser');
+});
+
+
+
+
 
 
 Route::get('/l', function () {

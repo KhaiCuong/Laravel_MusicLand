@@ -101,5 +101,12 @@
         button.parent().parent().find('input').val(newVal);
     });
     
+    document.getElementById("startOrStopImg").onclick = function() {
+        var audio = document.getElementById("myAudio");
+        if (audio.paused) audio.play();
+        else audio.pause();
+    };
+        
+    
 })(jQuery);
 
