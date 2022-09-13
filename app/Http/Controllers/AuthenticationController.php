@@ -19,7 +19,7 @@ class AuthenticationController extends Controller
         // $user = Sentinel::registerAndActivate($credentials);
 
 
-        return view('admins.login');
+
 
         return view('authentication.login');
 
@@ -33,30 +33,31 @@ class AuthenticationController extends Controller
         ];
         if ($user = Sentinel::authenticate($credentials)) {
             $user = Sentinel::getUser();
-            $role = Sentinel::getRoleRepository()->findBySlug('admin');
+            // $role = Sentinel::getRoleRepository()->findBySlug('admin');
 
-            if(!$user->inRole($role)){
-                return redirect()->route('layout.home');
-            } else {
-                return redirect()->route('layout.home');
-            }
+            // if(!$user->inRole($role)){
+            //     return redirect()->route('home');
+            // } else {
+            //     return redirect()->route('home');
+            // }
+            return redirect()->route('home');
            
-        } else {
-            // wrong username or password
-            return view('admins.login');
+        // } else {
+        //     // wrong username or password
+        //     return view('authentication.login');
 
-            if (!$user->inRole($role)) {
-                return redirect()->route('home');
-            }
+        //     if (!$user->inRole($role)) {
+        //         return redirect()->route('home');
+        //     }
             // } else {
             //     return redirect()->route('admin.index');
             // }
 
-        else {
+        // else {
             // wrong username or password
-            return view('authentication.login');
+        //     return view('authentication.login');
 
-        }
+        // }
      
     }
 }

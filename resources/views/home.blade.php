@@ -13,8 +13,7 @@
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -89,20 +88,16 @@
 
         <div class="col-lg-10" style="padding-left: 0px; padding-right:0;  ">
 
-            <div class="align-items-center py-3 top-bar"
-                style="background: linear-gradient(80deg,rgb(45,3,43),rgb(25,0,1) ); height: 70px; top:0;  position: sticky; left:cacl(2*100/12); width:100%; z-index: 10;">
+            <div class="align-items-center py-3 top-bar" style="background: linear-gradient(80deg,rgb(45,3,43),rgb(25,0,1) ); height: 70px; top:0;  position: sticky; left:cacl(2*100/12); width:100%; z-index: 10;">
                 <div class="col-lg-6 col-6 text-left">
                     <form action="" style="width: 40%;">
                         <div class="input-group" style="border-radius: 50%">
-                            <div class="input-group-append"
-                                style="background-color:#3e2744; border-top-left-radius: 50%; border-bottom-left-radius: 50%;">
+                            <div class="input-group-append" style="background-color:#3e2744; border-top-left-radius: 50%; border-bottom-left-radius: 50%;">
                                 <span class="input-group-text bg-transparent " style="border-style:none;">
                                     <i class="fa fa-search" style=" color:white;"></i>
                                 </span>
                             </div>
-                            <input type="text" class="form-control"
-                                style="border-top-right-radius: 20px;  border-style:none; border-bottom-right-radius: 20px;"
-                                placeholder="Search for products">
+                            <input type="text" class="form-control" style="border-top-right-radius: 20px;  border-style:none; border-bottom-right-radius: 20px;" placeholder="Search for products">
                         </div>
                     </form>
                 </div>
@@ -138,33 +133,27 @@
                         <div class="container owl-2-style " style="padding: 0; ">
                             <div class="owl-carousel owl-2" style="width: 100%;">
                                 <div class="media-29101">
-                                    <a href="#"><img src="carousel/images/img_3.jpg" alt="Image"
-                                            class="img-fluid" style="border-radius: 10px;"></a>
+                                    <a href="#"><img src="carousel/images/img_3.jpg" alt="Image" class="img-fluid" style="border-radius: 10px;"></a>
                                     <h3><a href="#">Consectetur Adipisicing Elit</a></h3>
                                 </div>
                                 <div class="media-29101">
-                                    <a href="#"><img src="carousel/images/img_3.jpg" alt="Image"
-                                            class="img-fluid" style="border-radius: 10px;"></a>
+                                    <a href="#"><img src="carousel/images/img_3.jpg" alt="Image" class="img-fluid" style="border-radius: 10px;"></a>
                                     <h3><a href="#">Beatae Doloribu</a></h3>
                                 </div>
                                 <div class="media-29101">
-                                    <a href="#"><img src="carousel/images/img_3.jpg" alt="Image"
-                                            class="img-fluid" style="border-radius: 10px;"></a>
+                                    <a href="#"><img src="carousel/images/img_3.jpg" alt="Image" class="img-fluid" style="border-radius: 10px;"></a>
                                     <h3><a href="#">Accusantium Eius Soluta</a></h3>
                                 </div>
                                 <div class="media-29101">
-                                    <a href="#"><img src="carousel/images/img_3.jpg" alt="Image"
-                                            class="img-fluid" style="border-radius: 10px;"></a>
+                                    <a href="#"><img src="carousel/images/img_3.jpg" alt="Image" class="img-fluid" style="border-radius: 10px;"></a>
                                     <h3><a href="#">Consectetur Adipisicing Elit</a></h3>
                                 </div>
                                 <div class="media-29101">
-                                    <a href="#"><img src="carousel/images/img_3.jpg" alt="Image"
-                                            class="img-fluid" style="border-radius: 10px;"></a>
+                                    <a href="#"><img src="carousel/images/img_3.jpg" alt="Image" class="img-fluid" style="border-radius: 10px;"></a>
                                     <h3><a href="#">Beatae Doloribu</a></h3>
                                 </div>
                                 <div class="media-29101">
-                                    <a href="#"><img src="carousel/images/img_3.jpg" alt="Image"
-                                            class="img-fluid" style="border-radius: 10px;"></a>
+                                    <a href="#"><img src="carousel/images/img_3.jpg" alt="Image" class="img-fluid" style="border-radius: 10px;"></a>
                                     <h3><a href="#">Accusantium Eius Soluta</a></h3>
                                 </div>
                             </div>
@@ -217,8 +206,7 @@
 
 
             <div>
-                <div class="pl-5 m-3 mb-4"
-                    style="display: flex;justify-content: space-between;  align-items: center;  ">
+                <div class="pl-5 m-3 mb-4" style="display: flex;justify-content: space-between;  align-items: center;  ">
                     <h2 class="new-music-title mb-0">Fresh new music</h2>
                     <p style="font-size: 20px ; font-weight: 600; margin: 0 14px 0 0 ;"> See all</p>
                 </div>
@@ -269,8 +257,7 @@
                     </div>
                     <div class="row px-xl-5">
                         <div class="col-md-6 pb-4">
-                            <div class="position-relative bg-secondary text-center text-md-right text-white mb-2 py-5 px-5"
-                                style="  background: linear-gradient(80deg,rgb(70, 138, 164),rgb(0, 128, 89) , rgb(101, 0, 87));">
+                            <div class="position-relative bg-secondary text-center text-md-right text-white mb-2 py-5 px-5" style="  background: linear-gradient(80deg,rgb(70, 138, 164),rgb(0, 128, 89) , rgb(101, 0, 87));">
                                 <img src="img/offer-1.png" alt="">
                                 <div class="position-relative" style="z-index: 1;">
                                     <h2 class="mb-4 font-weight-semi-bold" style="font-size: 28px; color:white">Top
@@ -280,8 +267,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 pb-4">
-                            <div class="position-relative bg-secondary text-center text-md-left text-white mb-2 py-5 px-5"
-                                style="background: linear-gradient(250deg,rgb(70, 138, 164),rgb(107, 1, 1) ,rgb(116, 0, 102));">
+                            <div class="position-relative bg-secondary text-center text-md-left text-white mb-2 py-5 px-5" style="background: linear-gradient(250deg,rgb(70, 138, 164),rgb(107, 1, 1) ,rgb(116, 0, 102));">
                                 <img src="img/offer-2.png" alt="">
                                 <div class="position-relative" style="z-index: 1;">
                                     <h2 class="mb-4 font-weight-semi-bold" style="font-size: 28px; color:white">Top
@@ -301,159 +287,128 @@
 
 
 
-                <div class="pl-5 m-3 mb-4 pt-5"
-                    style="display: flex;justify-content: space-between;  align-items: center;  ">
+                <div class="pl-5 m-3 mb-4 pt-5" style="display: flex;justify-content: space-between;  align-items: center;  ">
                     <h2 class="new-music-title mb-0">Emerging Artists</h2>
                     <p style="font-size: 20px ; font-weight: 600; margin: 0 14px 0 0 ;"> See all</p>
                 </div>
                 <div class="row px-xl-5 pb-3 mt-3" style="display: flex; justify-content: space-around;">
                     <div class="col-lg-2 col-md-6 pb-1 " style="  background-color: rgba(180, 169, 169, 0.1);">
                         <a href="" class="cat-img position-relative overflow-hidden mb-3 border-radius-6">
-                            <img class="img-fluid border-radius-50 mt-3" style="height: 180px; width: 180px;"
-                                src="img/sontung.jpg" alt="">
+                            <img class="img-fluid border-radius-50 mt-3" style="height: 180px; width: 180px;" src="img/sontung.jpg" alt="">
                         </a>
                         <h5 class=" mt-4" style="color: white; text-align: center;">Artists </h5>
                     </div>
                     <div class="col-lg-2 col-md-6 pb-1" style="  background-color: rgba(180, 169, 169, 0.1);">
                         <a href="" class="cat-img position-relative overflow-hidden mb-3 border-radius-6">
-                            <img class="img-fluid border-radius-50 mt-3" style="height: 180px; width: 180px;"
-                                src="img/sontung.jpg" alt="">
+                            <img class="img-fluid border-radius-50 mt-3" style="height: 180px; width: 180px;" src="img/sontung.jpg" alt="">
                         </a>
                         <h5 class=" mt-4" style="color: white; text-align: center;">Artists </h5>
                     </div>
                     <div class="col-lg-2 col-md-6 pb-1" style="  background-color: rgba(180, 169, 169, 0.1);">
                         <a href="" class="cat-img position-relative overflow-hidden mb-3 border-radius-6">
-                            <img class="img-fluid border-radius-50 mt-3" style="height: 180px; width: 180px;"
-                                src="img/sontung.jpg" alt="">
+                            <img class="img-fluid border-radius-50 mt-3" style="height: 180px; width: 180px;" src="img/sontung.jpg" alt="">
                         </a>
                         <h5 class=" mt-4" style="color: white; text-align: center;">Artists </h5>
                     </div>
                     <div class="col-lg-2 col-md-6 pb-1" style="  background-color: rgba(180, 169, 169, 0.1);">
                         <a href="" class="cat-img position-relative overflow-hidden mb-3 border-radius-6">
-                            <img class="img-fluid border-radius-50 mt-3" style="height: 180px; width: 180px;"
-                                src="img/sontung.jpg" alt="">
+                            <img class="img-fluid border-radius-50 mt-3" style="height: 180px; width: 180px;" src="img/sontung.jpg" alt="">
                         </a>
                         <h5 class=" mt-4" style="color: white; text-align: center;">Artists </h5>
                     </div>
                     <div class="col-lg-2 col-md-6 pb-1" style="  background-color: rgba(180, 169, 169, 0.1);">
                         <a href="" class="cat-img position-relative overflow-hidden mb-3 border-radius-6">
-                            <img class="img-fluid border-radius-50 mt-3" style="height: 180px; width: 180px;"
-                                src="img/sontung.jpg" alt="">
+                            <img class="img-fluid border-radius-50 mt-3" style="height: 180px; width: 180px;" src="img/sontung.jpg" alt="">
                         </a>
                         <h5 class=" mt-4" style="color: white; text-align: center;">Artists </h5>
                     </div>
                 </div>
 
-                <div class="pl-5 m-3 mb-4 pt-5"
-                    style="display: flex;justify-content: space-between;  align-items: center;  ">
+                <div class="pl-5 m-3 mb-4 pt-5" style="display: flex;justify-content: space-between;  align-items: center;  ">
                     <h2 class="new-music-title mb-0">Emerging Artists</h2>
                     <p style="font-size: 20px ; font-weight: 600; margin: 0 14px 0 0 ;"> See all</p>
                 </div>
                 <div class="row px-xl-5 pb-3 mt-3" style="display: flex; justify-content: space-around;">
                     <div class="col-lg-2 col-md-6 pb-1">
-                        <a href="" class="cat-img position-relative overflow-hidden mb-3"
-                            style=" width:100% ;">
-                            <img class="img-fluid" src="img/product-3.jpg"
-                                style="height: 220px;  width:100% ; object-fit: fill;" alt="">
+                        <a href="" class="cat-img position-relative overflow-hidden mb-3" style=" width:100% ;">
+                            <img class="img-fluid" src="img/product-3.jpg" style="height: 220px;  width:100% ; object-fit: fill;" alt="">
                         </a>
                         <h5 class=" pt-2 pb-2" style="color: white; background-color: rgba(180, 169, 169, 0.4); ">
                             Music </h5>
                     </div>
                     <div class="col-lg-2 col-md-6 pb-1">
-                        <a href="" class="cat-img position-relative overflow-hidden mb-3"
-                            style=" width:100% ;">
-                            <img class="img-fluid" src="img/product-3.jpg"
-                                style="height: 220px;  width:100% ; object-fit: fill;" alt="">
+                        <a href="" class="cat-img position-relative overflow-hidden mb-3" style=" width:100% ;">
+                            <img class="img-fluid" src="img/product-3.jpg" style="height: 220px;  width:100% ; object-fit: fill;" alt="">
                         </a>
                         <h5 class=" pt-2 pb-2" style="color: white; background-color: rgba(180, 169, 169, 0.4); ">
                             Music </h5>
                     </div>
                     <div class="col-lg-2 col-md-6 pb-1">
-                        <a href="" class="cat-img position-relative overflow-hidden mb-3"
-                            style=" width:100% ;">
-                            <img class="img-fluid" src="img/product-3.jpg"
-                                style="height: 220px;  width:100% ; object-fit: fill;" alt="">
+                        <a href="" class="cat-img position-relative overflow-hidden mb-3" style=" width:100% ;">
+                            <img class="img-fluid" src="img/product-3.jpg" style="height: 220px;  width:100% ; object-fit: fill;" alt="">
                         </a>
                         <h5 class=" pt-2 pb-2" style="color: white; background-color: rgba(180, 169, 169, 0.4); ">
                             Music </h5>
                     </div>
                     <div class="col-lg-2 col-md-6 pb-1">
-                        <a href="" class="cat-img position-relative overflow-hidden mb-3"
-                            style=" width:100% ;">
-                            <img class="img-fluid" src="img/product-3.jpg"
-                                style="height: 220px;  width:100% ; object-fit: fill;" alt="">
+                        <a href="" class="cat-img position-relative overflow-hidden mb-3" style=" width:100% ;">
+                            <img class="img-fluid" src="img/product-3.jpg" style="height: 220px;  width:100% ; object-fit: fill;" alt="">
                         </a>
                         <h5 class=" pt-2 pb-2" style="color: white; background-color: rgba(180, 169, 169, 0.4); ">
                             Music </h5>
                     </div>
                     <div class="col-lg-2 col-md-6 pb-1">
-                        <a href="" class="cat-img position-relative overflow-hidden mb-3"
-                            style=" width:100% ;">
-                            <img class="img-fluid" src="img/product-3.jpg"
-                                style="height: 220px;  width:100% ; object-fit: fill;" alt="">
+                        <a href="" class="cat-img position-relative overflow-hidden mb-3" style=" width:100% ;">
+                            <img class="img-fluid" src="img/product-3.jpg" style="height: 220px;  width:100% ; object-fit: fill;" alt="">
                         </a>
                         <h5 class=" pt-2 pb-2" style="color: white; background-color: rgba(180, 169, 169, 0.4); ">
                             Music </h5>
                     </div>
                     <div class="col-lg-2 col-md-6 pb-1">
-                        <a href="" class="cat-img position-relative overflow-hidden mb-3"
-                            style=" width:100% ;">
-                            <img class="img-fluid" src="img/product-3.jpg"
-                                style="height: 220px;  width:100% ; object-fit: fill;" alt="">
+                        <a href="" class="cat-img position-relative overflow-hidden mb-3" style=" width:100% ;">
+                            <img class="img-fluid" src="img/product-3.jpg" style="height: 220px;  width:100% ; object-fit: fill;" alt="">
                         </a>
                         <h5 class=" pt-2 pb-2" style="color: white; background-color: rgba(180, 169, 169, 0.4); ">
                             Music </h5>
                     </div>
                     <div class="col-lg-2 col-md-6 pb-1">
-                        <a href="" class="cat-img position-relative overflow-hidden mb-3"
-                            style=" width:100% ;">
-                            <img class="img-fluid" src="img/product-3.jpg"
-                                style="height: 220px;  width:100% ; object-fit: fill;" alt="">
+                        <a href="" class="cat-img position-relative overflow-hidden mb-3" style=" width:100% ;">
+                            <img class="img-fluid" src="img/product-3.jpg" style="height: 220px;  width:100% ; object-fit: fill;" alt="">
                         </a>
                         <h5 class=" pt-2 pb-2" style="color: white; background-color: rgba(180, 169, 169, 0.4); ">
                             Music </h5>
                     </div>
                     <div class="col-lg-2 col-md-6 pb-1">
-                        <a href="" class="cat-img position-relative overflow-hidden mb-3"
-                            style=" width:100% ;">
-                            <img class="img-fluid" src="img/product-3.jpg"
-                                style="height: 220px;  width:100% ; object-fit: fill;" alt="">
+                        <a href="" class="cat-img position-relative overflow-hidden mb-3" style=" width:100% ;">
+                            <img class="img-fluid" src="img/product-3.jpg" style="height: 220px;  width:100% ; object-fit: fill;" alt="">
                         </a>
                         <h5 class=" pt-2 pb-2" style="color: white; background-color: rgba(180, 169, 169, 0.4); ">
                             Music </h5>
                     </div>
                     <div class="col-lg-2 col-md-6 pb-1">
-                        <a href="" class="cat-img position-relative overflow-hidden mb-3"
-                            style=" width:100% ;">
-                            <img class="img-fluid" src="img/product-3.jpg"
-                                style="height: 220px;  width:100% ; object-fit: fill;" alt="">
+                        <a href="" class="cat-img position-relative overflow-hidden mb-3" style=" width:100% ;">
+                            <img class="img-fluid" src="img/product-3.jpg" style="height: 220px;  width:100% ; object-fit: fill;" alt="">
                         </a>
                         <h5 class=" pt-2 pb-2" style="color: white; background-color: rgba(180, 169, 169, 0.4); ">
                             Music </h5>
                     </div>
                     <div class="col-lg-2 col-md-6 pb-1">
-                        <a href="" class="cat-img position-relative overflow-hidden mb-3"
-                            style=" width:100% ;">
-                            <img class="img-fluid" src="img/product-3.jpg"
-                                style="height: 220px;  width:100% ; object-fit: fill;" alt="">
+                        <a href="" class="cat-img position-relative overflow-hidden mb-3" style=" width:100% ;">
+                            <img class="img-fluid" src="img/product-3.jpg" style="height: 220px;  width:100% ; object-fit: fill;" alt="">
                         </a>
                         <h5 class=" pt-2 pb-2" style="color: white; background-color: rgba(180, 169, 169, 0.4); ">
                             Music </h5>
                     </div>
                     <div class="col-lg-2 col-md-6 pb-1">
-                        <a href="" class="cat-img position-relative overflow-hidden mb-3"
-                            style=" width:100% ;">
-                            <img class="img-fluid" src="img/product-3.jpg"
-                                style="height: 220px;  width:100% ; object-fit: fill;" alt="">
+                        <a href="" class="cat-img position-relative overflow-hidden mb-3" style=" width:100% ;">
+                            <img class="img-fluid" src="img/product-3.jpg" style="height: 220px;  width:100% ; object-fit: fill;" alt="">
                         </a>
                         <h5 class=" pt-2 pb-2" style="color: white; background-color: rgba(180, 169, 169, 0.4); ">
                             Music </h5>
                     </div>
                     <div class="col-lg-2 col-md-6 pb-1">
-                        <a href="" class="cat-img position-relative overflow-hidden mb-3"
-                            style=" width:100% ;">
-                            <img class="img-fluid" src="img/product-3.jpg"
-                                style="height: 220px;  width:100% ; object-fit: fill;" alt="">
+                        <a href="" class="cat-img position-relative overflow-hidden mb-3" style=" width:100% ;">
+                            <img class="img-fluid" src="img/product-3.jpg" style="height: 220px;  width:100% ; object-fit: fill;" alt="">
                         </a>
                         <h5 class=" pt-2 pb-2" style="color: white; background-color: rgba(180, 169, 169, 0.4); ">
                             Music </h5>
@@ -506,8 +461,7 @@
                     <div class="row px-xl-5 pt-5">
                         <div class="col-lg-4 col-md-12 mb-5 pr-3 pr-xl-5">
                             <a href="" class="text-decoration-none">
-                                <h1 class="mb-4 display-5 font-weight-semi-bold"><span
-                                        class="text-primary font-weight-bold border border-white px-3 mr-1">E</span>Shopper
+                                <h1 class="mb-4 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border border-white px-3 mr-1">E</span>Shopper
                                 </h1>
                             </a>
                             <p>Dolore erat dolor sit lorem vero amet. Sed sit lorem magna, ipsum no sit erat lorem et
@@ -522,51 +476,36 @@
                                 <div class="col-md-4 mb-5">
                                     <h5 class="font-weight-bold text-dark mb-4">Quick Links</h5>
                                     <div class="d-flex flex-column justify-content-start">
-                                        <a class="text-dark mb-2" href="index.html"><i
-                                                class="fa fa-angle-right mr-2"></i>Home</a>
-                                        <a class="text-dark mb-2" href="shop.html"><i
-                                                class="fa fa-angle-right mr-2"></i>Our Shop</a>
-                                        <a class="text-dark mb-2" href="detail.html"><i
-                                                class="fa fa-angle-right mr-2"></i>Shop Detail</a>
-                                        <a class="text-dark mb-2" href="cart.html"><i
-                                                class="fa fa-angle-right mr-2"></i>Shopping Cart</a>
-                                        <a class="text-dark mb-2" href="checkout.html"><i
-                                                class="fa fa-angle-right mr-2"></i>Checkout</a>
-                                        <a class="text-dark" href="contact.html"><i
-                                                class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                                        <a class="text-dark mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                                        <a class="text-dark mb-2" href="shop.html"><i class="fa fa-angle-right mr-2"></i>Our Shop</a>
+                                        <a class="text-dark mb-2" href="detail.html"><i class="fa fa-angle-right mr-2"></i>Shop Detail</a>
+                                        <a class="text-dark mb-2" href="cart.html"><i class="fa fa-angle-right mr-2"></i>Shopping Cart</a>
+                                        <a class="text-dark mb-2" href="checkout.html"><i class="fa fa-angle-right mr-2"></i>Checkout</a>
+                                        <a class="text-dark" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
                                     </div>
                                 </div>
                                 <div class="col-md-4 mb-5">
                                     <h5 class="font-weight-bold text-dark mb-4">Quick Links</h5>
                                     <div class="d-flex flex-column justify-content-start">
-                                        <a class="text-dark mb-2" href="index.html"><i
-                                                class="fa fa-angle-right mr-2"></i>Home</a>
-                                        <a class="text-dark mb-2" href="shop.html"><i
-                                                class="fa fa-angle-right mr-2"></i>Our Shop</a>
-                                        <a class="text-dark mb-2" href="detail.html"><i
-                                                class="fa fa-angle-right mr-2"></i>Shop Detail</a>
-                                        <a class="text-dark mb-2" href="cart.html"><i
-                                                class="fa fa-angle-right mr-2"></i>Shopping Cart</a>
-                                        <a class="text-dark mb-2" href="checkout.html"><i
-                                                class="fa fa-angle-right mr-2"></i>Checkout</a>
-                                        <a class="text-dark" href="contact.html"><i
-                                                class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                                        <a class="text-dark mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                                        <a class="text-dark mb-2" href="shop.html"><i class="fa fa-angle-right mr-2"></i>Our Shop</a>
+                                        <a class="text-dark mb-2" href="detail.html"><i class="fa fa-angle-right mr-2"></i>Shop Detail</a>
+                                        <a class="text-dark mb-2" href="cart.html"><i class="fa fa-angle-right mr-2"></i>Shopping Cart</a>
+                                        <a class="text-dark mb-2" href="checkout.html"><i class="fa fa-angle-right mr-2"></i>Checkout</a>
+                                        <a class="text-dark" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
                                     </div>
                                 </div>
                                 <div class="col-md-4 mb-5">
                                     <h5 class="font-weight-bold text-dark mb-4">Newsletter</h5>
                                     <form action="">
                                         <div class="form-group">
-                                            <input type="text" class="form-control border-0 py-4"
-                                                placeholder="Your Name" required="required" />
+                                            <input type="text" class="form-control border-0 py-4" placeholder="Your Name" required="required" />
                                         </div>
                                         <div class="form-group">
-                                            <input type="email" class="form-control border-0 py-4"
-                                                placeholder="Your Email" required="required" />
+                                            <input type="email" class="form-control border-0 py-4" placeholder="Your Email" required="required" />
                                         </div>
                                         <div>
-                                            <button class="btn btn-primary btn-block border-0 py-3"
-                                                type="submit">Subscribe Now</button>
+                                            <button class="btn btn-primary btn-block border-0 py-3" type="submit">Subscribe Now</button>
                                         </div>
                                     </form>
                                 </div>
@@ -599,16 +538,13 @@
         </div>
 
 
-        <div class="align-items-center py-3 top-bar"
-            style="background-color: rgba(0, 0, 0, 0.9);z-index:100; height: 100px; top:0;  position: sticky; left:0 ; bottom: 0; width:100%;">
+        <div class="align-items-center py-3 top-bar" style="background-color: rgba(0, 0, 0, 0.9);z-index:100; height: 100px; top:0;  position: sticky; left:0 ; bottom: 0; width:100%;">
 
 
 
-            <div
-                style="display: flex; margin: 0 34px; justify-content: space-between; align-items: center; width:100%; ">
+            <div style="display: flex; margin: 0 34px; justify-content: space-between; align-items: center; width:100%; ">
                 <div style="display: flex; height:100%; align-items: center; width: 30%; ">
-                    <img src="img/vendor-8.jpg" alt="song img"
-                        style="width: 50px; height: auto; margin-right: 10px;">
+                    <img src="img/vendor-8.jpg" alt="song img" style="width: 50px; height: auto; margin-right: 10px;">
                     <p style="margin-bottom: 0; margin-right: 8px; color: white; font-weight: bold;">Music Name</p>
                     <p style="margin-bottom: 0; margin-right: 8px; color: white;">-</p>
                     <p style="margin-bottom: 0; color: white; font-size:12px"> Artis Name</p>
@@ -620,6 +556,8 @@
                         <input type="range" id="range-val" value="46" min="0" max="143">
                         <!-- <div id='tip'>Some tip</div> -->
                     </div>
+
+
 
                     <div id="time">
                         <p>0:46</p>
@@ -637,7 +575,7 @@
                         <p>2:23</p>
                     </div>
                 </div>
-                <audio id="myAudio">
+                <audio >
                     <source src="audio/song-1.ogg" type="audio/ogg">
                     <source src="audio/song-1.mp3" type="audio/mpeg">
                 </audio>
@@ -646,40 +584,78 @@
 
 
                 <script>
-                    const wrapper = document.querySelector(".wrapper"),
-                        playPauseBtn = wrapper.querySelector(".play-pause");
+                    class UI {
+                        constructor() {
+                            this.songIndex = 0;
 
 
 
+                        }
+                        // method
 
-                    window.addEventListener("load", () => {
-                        loadMusic(allMusic);
+                        // const audio = document.querySelector('#audio');
+                        // class UI {
+                        //     // load detail song when page loaded
+                        //     loadSong(music) {
+                        //         audio.src = `music/${music.song}.mp3`;
 
-                    });
+                        //         this.getDuration(audio).then((time) => {
+                        //             thumbnailSong.src = `image/${music.song}.jpg`;
+                        //             nameSong.textContent = music.song;
+                        //             author.textContent = music.author;
+                        //             timeSong.textContent = time;
+                        //             thumbnailSong.classList.add('rotate-ani');
+                        //         });
+                        //     }
+                        // }
 
+                        const btnPlay = document.querySelector('.play-pause');
 
-                    var x = document.getElementById("myAudio");
+                        playSong() {
+                            musicContent.allMusic.add('playing');
+                            thumbnailSong.style.animationPlayState = 'running';
+                            btnPlay.querySelector('.fa').classList.remove('fa-play');
+                            btnPlay.querySelector('.fa').classList.add('fa-pause');
 
-                    function playAudio() {
-                        x.play();
+                            audio.play();
+                        }
                     }
 
-                    function pauseAudio() {
-                        x.pause();
-                    }
+
+
+                    // const wrapper = document.querySelector(".wrapper"),
+                    //     playPauseBtn = wrapper.querySelector(".play-pause");
 
 
 
-                    playPauseBtn.addEventListener("click", () => {
-                        const isMusicPlay = wrapper.classList.contains("paused");
-                        //if isPlayMusic is true then call pauseMusic else call playMusic
-                        isMusicPlay ? pauseAudio() : playAudio();
 
-                    });
+                    // window.addEventListener("load", () => {
+                    //     loadMusic(allMusic);
+
+                    // });
+
+
+                    // var x = document.getElementById("myAudio");
+
+                    // function playAudio() {
+                    //     x.play();
+                    // }
+
+                    // function pauseAudio() {
+                    //     x.pause();
+                    // }
+
+
+
+                    // playPauseBtn.addEventListener("click", () => {
+                    //     const isMusicPlay = wrapper.classList.contains("paused");
+                    //     //if isPlayMusic is true then call pauseMusic else call playMusic
+                    //     isMusicPlay ? pauseAudio() : playAudio();
+
+                    // });
                 </script>
 
-                <div
-                    style="display: flex; height:100%; align-items: center; justify-content: flex-end; font-size: 20px;  width: 30%; ">
+                <div style="display: flex; height:100%; align-items: center; justify-content: flex-end; font-size: 20px;  width: 30%; ">
                     <i class="far fa-heart" style="margin-right: 20px;"></i>
                     <i class="fas fa-long-arrow-alt-down" style="margin-right: 20px;"></i>
                     <i class="far fa-share-square"></i>

@@ -25,10 +25,8 @@ Route::get('/admin', function () {
 });
 
 
-Route::get('/login', function () {
-    return view('admins.login');
-});
-Route::post('/login', [AuthenticationController::class, 'processLogin'])->name('processLogin');
+
+
 
 
 Route::get('/l', function () {
