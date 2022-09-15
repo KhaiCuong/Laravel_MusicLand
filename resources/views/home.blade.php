@@ -538,121 +538,258 @@
         </div>
 
 
-        <div class="align-items-center py-3 top-bar" style="background-color: rgba(0, 0, 0, 0.9);z-index:100; height: 100px; top:0;  position: sticky; left:0 ; bottom: 0; width:100%;">
+        <div class="align-items-center py-3 top-bar music-content" style="background-color: rgba(0, 0, 0, 0.9);z-index:100; height: 100px; top:0;  position: sticky; left:0 ; bottom: 0; width:100%;">
 
 
 
             <div style="display: flex; margin: 0 34px; justify-content: space-between; align-items: center; width:100%; ">
-                <div style="display: flex; height:100%; align-items: center; width: 30%; ">
+                <div style="display: flex; height:100%; align-items: center; width: 30%;" class="info-song">
                     <img src="img/vendor-8.jpg" alt="song img" style="width: 50px; height: auto; margin-right: 10px;">
-                    <p style="margin-bottom: 0; margin-right: 8px; color: white; font-weight: bold;">Music Name</p>
+                    <p style="margin-bottom: 0; margin-right: 8px; color: white; font-weight: bold;" class="song-name">song name</p>
                     <p style="margin-bottom: 0; margin-right: 8px; color: white;">-</p>
-                    <p style="margin-bottom: 0; color: white; font-size:12px"> Artis Name</p>
+                    <p style="margin-bottom: 0; color: white; font-size:12px" class="artist"> Artis Name</p>
                 </div>
 
 
-                <div id="content" style="height: 60px; width:50%; position:relative">
-                    <div id="range">
-                        <input type="range" id="range-val" value="46" min="0" max="143">
-                        <!-- <div id='tip'>Some tip</div> -->
+                <div id="content" class="bar-song" style="height: 60px; width:50%; position:relative">
+                    <div id="range" class="progress" style="background-color:black ; cursor: pointer;">
+                     
+                
+                        <input type="range" class="progress-bar" style="background-color:black ;" value="143" min="0" max="143" >
+                  
                     </div>
 
 
 
                     <div id="time">
-                        <p>0:46</p>
+                        <span class="current-time">00:00</span>
                     </div>
                     <div id="buttons">
-                        <i class="fa fa-step-backward fa-3x" style="padding-left: 0;"></i>
-                        <div class="play-pause" onclick="playAudio()">
-                            <i class="fa fa-play fa-3x"></i>
-                        </div>
-
-                        <i class="fa fa-step-forward fa-3x"></i>
+                        <button style="background-color: black; color:white ; margin-left: 50px;">
+                            <i class="fa fa-step-backward fa-3x back" style="padding-left: 0;"></i>
+                        </button>
+                        <button class="play-song" style="background-color: black ; color:white ; margin-left: 50px; ">
+                            <i class="fa fa-play" style="border-color: black;"></i>
+                        </button>
+                        <button style="background-color: black; color:white ; margin-left: 50px;">
+                            <i class="fa fa-step-forward fa-3x forward"></i>
+                        </button>
 
                     </div>
                     <div id="total-time">
-                        <p>2:23</p>
+                        <span class="duration-time">02:33</span>
                     </div>
                 </div>
-                <audio >
-                    <source src="audio/song-1.ogg" type="audio/ogg">
-                    <source src="audio/song-1.mp3" type="audio/mpeg">
+                <audio id="audio">
+
                 </audio>
 
 
 
 
                 <script>
+                    const btnHome = document.querySelector(".go-home");
+                    const btnPlayList = document.querySelector(".play-list");
+                    const btnPlay = document.querySelector(".play-song");
+                    const btnBack = document.querySelector(".back");
+                    const btnForward = document.querySelector(".forward");
+                    //
+                    const audio = document.querySelector("#audio");
+                    const progress = document.querySelector(".progress");
+                    const playListBox = document.querySelector(".playlist-box");
+                    const songs = document.querySelector(".list-song");
+                    const thumbnailSong = document.querySelector(".thumbnail-song img");
+                    const nameSong = document.querySelector(".info-song .song-name");
+                    const artist = document.querySelector(".info-song .artist");
+                    const timeSong = document.querySelector(".bar-song .duration-time");
+                    const musicContent = document.querySelector(".music-content");
+                    const progressBar = document.querySelector(".progress-bar");
+                    const currentTimeDisplay = document.querySelector(".current-time");
+
+
+                    // btnPlay.onclick = function() {
+                    //     audio.play()
+                    // };
+
+                    let allMusic = [{
+                            name: "song-1",
+                            artist: "YOASOBI",
+                            img: "img/song-1.jpg",
+
+                        },
+                        {
+                            name: "song-2",
+                            artist: "YOASOBI",
+                            img: "img/song-2.jpg",
+
+                        },
+                        {
+                            name: "song-3",
+                            artist: "YOASOBI",
+                            img: "img/song-3.jpg",
+
+                        },
+                    ];
                     class UI {
                         constructor() {
                             this.songIndex = 0;
+                        }
 
 
+                        
+
+                        getDuration(music) {
+                            return new Promise(function(resolve) {
+                                music.addEventListener("loadedmetadata", function() {
+                                    const time = formatTime(music.duration);
+
+                                    resolve(time);
+                                    
+                                });
+                            });
+                        }
+
+
+                        loadSong(music) {
+                     
+                            audio.src = `audio/${music.name}.mp3`;
+
+                            this.getDuration(audio).then((time) => {
+                                nameSong.textContent = music.name;
+                                artist.textContent = music.artist;
+        
+                               timeSong.textContent = time;
+                            });
 
                         }
-                        // method
+                        // async setSongs() {
+                        //     songs.innerHTML = "";
 
-                        // const audio = document.querySelector('#audio');
-                        // class UI {
-                        //     // load detail song when page loaded
-                        //     loadSong(music) {
-                        //         audio.src = `music/${music.song}.mp3`;
 
-                        //         this.getDuration(audio).then((time) => {
-                        //             thumbnailSong.src = `image/${music.song}.jpg`;
-                        //             nameSong.textContent = music.song;
-                        //             author.textContent = music.author;
-                        //             timeSong.textContent = time;
-                        //             thumbnailSong.classList.add('rotate-ani');
-                        //         });
-                        //     }
                         // }
 
-                        const btnPlay = document.querySelector('.play-pause');
-
                         playSong() {
-                            musicContent.allMusic.add('playing');
-                            thumbnailSong.style.animationPlayState = 'running';
+
+                            musicContent.classList.add('playing');
+                            // thumbnailSong.style.animationPlayState = 'running';
                             btnPlay.querySelector('.fa').classList.remove('fa-play');
                             btnPlay.querySelector('.fa').classList.add('fa-pause');
 
                             audio.play();
+                        };
+
+
+                        pauseSong() {
+
+                            musicContent.classList.remove('playing');
+                            // thumbnailSong.style.animationPlayState = 'running';
+                            btnPlay.querySelector('.fa').classList.add('fa-play');
+                            btnPlay.querySelector('.fa').classList.remove('fa-pause');
+
+                            audio.pause();
+                        };
+
+
+                        nextSong() {
+                            this.songIndex++;
+
+                            if (this.songIndex > allMusic.length - 1) {
+                                this.songIndex = 0;
+                            }
+
+                            this.loadSong(allMusic[this.songIndex]);
                         }
+
+                        prevSong() {
+                            this.songIndex--;
+
+                            if (this.songIndex < 0) {
+                                this.songIndex = allMusic.length - 1;
+                            }
+
+                            this.loadSong(allMusic[this.songIndex]);
+                        }
+
+                        updateProgress(e) {
+                            const {
+                                currentTime,
+                                duration
+                            } = e.srcElement;
+                            const percentWidth = (currentTime / duration) * 100;
+                            progressBar.style.width = `${percentWidth}%`;
+                            const time = formatTime(currentTime);
+
+                            currentTimeDisplay.textContent = time;
+                        }
+                        // set progress
+                        setProgress(e) {
+                            const width = e.offsetX;
+                            const progress = e.currentTarget;
+                            const progressBarWidth = (width / progress.clientWidth) * 100;
+                            progressBar.style.width = `${progressBarWidth}%`;
+
+                            let {
+                                duration
+                            } = audio;
+                            audio.currentTime = (width * duration) / progress.clientWidth;
+                        }
+
+                    }
+
+                    document.addEventListener("DOMContentLoaded", eventListeners);
+
+                    function eventListeners() {
+                        const ui = new UI();
+
+                        // load song
+                        ui.loadSong(allMusic[ui.songIndex]);
+
+                        btnPlay.addEventListener("click", function() {
+                            if (musicContent.classList.contains("playing")) {
+                                ui.pauseSong();
+
+                            } else {
+                                ui.playSong();
+                            }
+                        });
+
+                        // previous song
+                        btnBack.addEventListener("click", function() {
+                            ui.prevSong();
+                            ui.playSong();
+                        });
+                        // forward song
+                        btnForward.addEventListener("click", function() {
+                            ui.nextSong();
+                            ui.playSong();
+                        });
+
+                        audio.addEventListener("timeupdate", function(e) {
+                            ui.updateProgress(e);
+                        });
+                        // set progress
+                        progress.addEventListener("click", function(e) {
+                            ui.setProgress(e);
+                        });
+
                     }
 
 
+                    function formatTime(sec_num) {
+                        let hours = Math.floor(sec_num / 3600);
+                        let minutes = Math.floor((sec_num - hours * 3600) / 60);
+                        let seconds = Math.floor(sec_num - hours * 3600 - minutes * 60);
 
-                    // const wrapper = document.querySelector(".wrapper"),
-                    //     playPauseBtn = wrapper.querySelector(".play-pause");
+                        hours = hours < 10 ? (hours > 0 ? '0' + hours : 0) : hours;
 
-
-
-
-                    // window.addEventListener("load", () => {
-                    //     loadMusic(allMusic);
-
-                    // });
-
-
-                    // var x = document.getElementById("myAudio");
-
-                    // function playAudio() {
-                    //     x.play();
-                    // }
-
-                    // function pauseAudio() {
-                    //     x.pause();
-                    // }
-
-
-
-                    // playPauseBtn.addEventListener("click", () => {
-                    //     const isMusicPlay = wrapper.classList.contains("paused");
-                    //     //if isPlayMusic is true then call pauseMusic else call playMusic
-                    //     isMusicPlay ? pauseAudio() : playAudio();
-
-                    // });
+                        if (minutes < 10) {
+                            minutes = '0' + minutes;
+                        }
+                        if (seconds < 10) {
+                            seconds = '0' + seconds;
+                        }
+                        return (hours !== 0 ? hours + ':' : '') + minutes + ':' + seconds;
+                    }
                 </script>
 
                 <div style="display: flex; height:100%; align-items: center; justify-content: flex-end; font-size: 20px;  width: 30%; ">

@@ -146,9 +146,6 @@ input[type=range]::-ms-track {
 
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
-  height: 18px;
-  width: 18px;
-  border-radius: 50px;
   background: #858688;
   cursor: pointer;
   margin-top: -8px;
@@ -168,14 +165,14 @@ input[type=range]::-webkit-slider-thumb:active {
 input[type=range]::-moz-slider-thumb:active {
   height: 28px;
   width: 28px;
-  margin-top: -12px;
+  margin-top: -52px;
   
 }
 
 input[type=range]::-ms-slider-thumb:active {
   height: 28px;
   width: 28px;
-  margin-top: -12px;
+  margin-top: -122px;
 }
 
 input[type=range]::-moz-range-thumb {
@@ -251,7 +248,8 @@ input[type=range]:focus::-ms-fill-upper {
 
   position: absolute;
   left: -60px;
-  top: 0
+  top: -14px;
+
   
 
 }
@@ -267,7 +265,8 @@ input[type=range]:focus::-ms-fill-upper {
 
   position: absolute;
   right: -60px;
-  top:0;
+  top: -14px;
+
 }
 
 #content #total-time p {
@@ -290,7 +289,6 @@ input[type=range]:focus::-ms-fill-upper {
 
 #content #buttons i {
   cursor: pointer;
-  padding-left: 50px;
   font-size: 20px;
   line-height: 30px;
 }
@@ -443,7 +441,7 @@ footer #random {
 
 .bbb_viewed_item {
   width: 100%;
-  background: #FFFFFF;
+  background:#FFFFFF;
   border-radius: 2px;
   padding-top: 25px;
   padding-bottom: 25px;
@@ -757,6 +755,8 @@ a.direct-link-2::before {
 *::before,
 *::after {
   box-sizing: border-box;
+  border-color: black
+  ;
 }
 
 html {
