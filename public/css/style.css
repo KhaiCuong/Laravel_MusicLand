@@ -248,7 +248,7 @@ input[type=range]:focus::-ms-fill-upper {
 
   position: absolute;
   left: -60px;
-  top: -14px;
+  top: 4px;
 
   
 
@@ -265,7 +265,7 @@ input[type=range]:focus::-ms-fill-upper {
 
   position: absolute;
   right: -60px;
-  top: -14px;
+  top: 4px;
 
 }
 
