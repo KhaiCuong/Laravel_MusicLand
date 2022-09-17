@@ -13,4 +13,7 @@ class HomeController extends Controller{
            return view('home');
      
 }
+    public function vieworder(){
+            return view('view_order');
+}
 }

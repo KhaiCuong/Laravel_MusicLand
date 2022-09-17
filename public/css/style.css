@@ -22,6 +22,8 @@ body {
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
 }
 
+
+
 #content #Click{
   width: 20px;
   margin: 0 auto;

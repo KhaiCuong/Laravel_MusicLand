@@ -156,6 +156,45 @@
                             </div>
                         </div>
                     </div>
+                    <div id="order-1" class="nav-section header-sticky" style="margin-left: 40px; margin-right: 40px; border-style:solid ; background-color:black; color:white;">
+                        <div class="header-nav-section">
+                            <div class="container" data-items="5" data-loop="false" data-nav="true" data-dots="false" data-responsive='{"0":{"items":"1"},"480":{"items":"2"},"768":{"items":"3"},"992":{"items":"4"},"1200":{"items":"5"}}'>
+                                <ul class="nav menu-nav clone-main-menu" style=" color:white; display:flex; justify-content: space-between; align-items: center;" data-menuname="Sale Info">
+                                    <li class="menu-item"><a href="#" class="link-term" style='font-size:24px; margin-right: 100px;'></a></li>
+                                    <li class="menu-item"><a href="#" class="link-term" style='font-size:24px'></a></li>
+                                    <li class="menu-item"><a href="#" class="link-term" style='font-size:24px'> </a></li>
+                                    <li class="menu-item"><a href="#" class="link-term" style='font-size:24px'></a></li>
+                                    <li class="menu-item"><a href="#" class="link-term" style='font-size:24px'></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="order-2" class="nav-section header-sticky" style="margin-left: 40px; margin-right: 40px; border-style:solid ; background-color:black; color:white;">
+                        <div class="header-nav-section">
+                            <div class="container">
+                                <ul class="nav menu-nav clone-main-menu" style=" color:white; display:flex; justify-content: space-between; align-items: center;" data-menuname="Sale Info">
+                                    <li class="menu-item"><a href="#" class="link-term" style='font-size:24px; margin-right: 100px;'>02</a></li>
+                                    <li class="menu-item"><a href="#" class="link-term" style='font-size:24px'>Person B</a></li>
+                                    <li class="menu-item"><a href="#" class="link-term" style='font-size:24px'>personB@gmail </a></li>
+                                    <li class="menu-item"><a href="#" class="link-term" style='font-size:24px'>5 minutes</a></li>
+                                    <li class="menu-item"><a href="#" class="link-term" style='font-size:24px'>Not inorder</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="order-3" class="nav-section header-sticky" style="margin-left: 40px; margin-right: 40px; border-style:solid ; background-color:black; color:white;">
+                        <div class="header-nav-section">
+                            <div class="container">
+                                <ul class="nav menu-nav clone-main-menu" style=" color:white; display:flex; justify-content: space-between; align-items: center;" data-menuname="Sale Info">
+                                    <li class="menu-item"><a href="#" class="link-term" style='font-size:24px; margin-right: 100px;'>03</a></li>
+                                    <li class="menu-item"><a href="#" class="link-term" style='font-size:24px'>Person C</a></li>
+                                    <li class="menu-item"><a href="#" class="link-term" style='font-size:24px'>personC@gmail </a></li>
+                                    <li class="menu-item"><a href="#" class="link-term" style='font-size:24px'>10 minutes</a></li>
+                                    <li class="menu-item"><a href="#" class="link-term" style='font-size:24px'>Not inorder</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

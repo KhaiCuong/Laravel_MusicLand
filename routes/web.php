@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthenticationController;
-
+use App\Http\Controller\HomeControllers;
 use App\Http\Controllers\RegisterController;
 /*
 |--------------------------------------------------------------------------
@@ -24,9 +24,10 @@ Route::get('/admin', function () {
     return view('admins.admin');
 });
 
+
 Route::get('/order', function () {
-    return view('admins.manageorder');
-});
+    return view('admins.view_order');
+}); 
 
 Route::get('/manageuser', function () {
     return view('admins.manageuser');
