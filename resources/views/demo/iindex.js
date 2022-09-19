@@ -1,3 +1,4 @@
+// btn
 const btnHome = document.querySelector(".go-home");
 const btnPlayList = document.querySelector(".play-list");
 const btnPlay = document.querySelector(".play-song");

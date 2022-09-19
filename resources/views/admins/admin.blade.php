@@ -75,11 +75,11 @@
                         </li>
                         <li class="direct-item">
                             <i class="fas fa-user-plus direct-icon"></i>
-                            <a href="" class="text-decoration-none direct-link-2"> Manage User</a>
+                            <a href="{{ route('user.index') }}" class="text-decoration-none direct-link-2"> Manage User</a>
                         </li>
                         <li class="direct-item">
                             <i class="fas fa-id-card-alt  direct-icon"></i>
-                            <a href="" class="text-decoration-none direct-link-3"> Manage Order</a>
+                            <a href="{{ route('order') }}" class="text-decoration-none direct-link-3"> Manage Order</a>
                         </li>
 
                     </ul>

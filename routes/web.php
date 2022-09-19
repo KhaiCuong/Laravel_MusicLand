@@ -3,7 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthenticationController;
 use App\Http\Controller\HomeControllers;
+use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\RegisterController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,13 +27,12 @@ Route::get('/admin', function () {
 });
 
 
-Route::get('/order', function () {
+Route::get('/vieworder', function () {
     return view('admins.view_order');
-}); 
+})->name('order'); 
 
-Route::get('/manageuser', function () {
-    return view('admins.manageuser');
-});
+
+Route::resource('user', UserController::class);
 
 
 
