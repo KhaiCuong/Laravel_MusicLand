@@ -149,45 +149,17 @@
                                 style="background-color: black; ">add new</a>
                         </div>
                     </div>
-                    <div class="nav-section header-sticky"
-                        style="margin-left: 40px; margin-right: 40px; background-color:black; color:white;">
-                        <div class="header-nav-section">
-                            <div class="container">
-                                <ul class="nav menu-nav clone-main-menu"
-                                    style=" color:white; display:flex; justify-content: space-between; align-items: center;"
-                                    data-menuname="Sale Info">
-                                    <li class="menu-item"><a href="#" class="link-term"
-                                            style='font-size:24px'>User ID </a></li>
-                                    <li class="menu-item"><a href="#" class="link-term"
-                                            style='font-size:24px'>User Name</a></li>
-                                    <li class="menu-item"><a href="#" class="link-term"
-                                            style='font-size:24px'>Email</a></li>
-                                    <li class="menu-item"><a href="#" class="link-term"
-                                            style='font-size:24px'>Membership Card</a></li>
-                                    <li class="menu-item"><a href="#" class="link-term"
-                                            style='font-size:24px'>Action</a></li>
-                                </ul>
-                                @foreach ($users as $user)
-                                
-                                   
-                                       
-                                            <ul class="nav menu-nav clone-main-menu"
-                                                style=" color:white; display:flex; justify-content: space-between; align-items: center;"
-                                                data-menuname="Sale Info">
-                                                <li class="menu-item"><a href="#" class="link-term"
-                                                        style='font-size:24px'>{{$user->user_id}}</a></li>
-                                                <li class="menu-item"><a href="#" class="link-term"
-                                                        style='font-size:24px'>{{$user->name}}</a></li>
-                                                <li class="menu-item"><a href="#" class="link-term"
-                                                        style='font-size:24px'>{{$user->email}}</a></li>
-                                                <li class="menu-item"><a href="#" class="link-term"
-                                                        style='font-size:24px'>{{$user->mem_card}}</a></li>
-                                                <li class="menu-item"><a href="#" class="link-term"
-                                                        style='font-size:24px'>Action</a></li>
-                                            </ul>
-                                        
-                                
-                            @endforeach
+                  
+                                <table border="1">
+                                    <thead>
+                                        @foreach ($users as $user)
+                                            <tr>
+                                                <th>{{$user->user_id}}</th>
+                                                <th>{{$user->name}}</th>
+                                                <th>{{$user->email}}</th>
+                                                <th>{{$user->mem_card}}</th>
+                                                <th>{{$user->credit_card}}</th>
+                                        @endforeach
         
                             </div>
                         </div>
