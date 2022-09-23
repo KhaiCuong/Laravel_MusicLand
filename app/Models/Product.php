@@ -9,6 +9,6 @@ class Product extends Model
 {
     use HasFactory;
 
-    protected $fillable=['title', 'playlist_id' ,'images','audio','artist',];
+    protected $fillable=['title', 'playlist_id' ,'image','audio','artist',];
 
 }

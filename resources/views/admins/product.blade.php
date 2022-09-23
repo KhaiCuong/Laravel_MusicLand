@@ -136,20 +136,39 @@
             <div class=" mt-0" style="padding-left: 0px; ">
                 <div class=" offer pt-5">
                     <div class="pl-5 m-3 mb-4 ">
-                        <i class="fa fa-music direct-icon" style='font-size:36px'> ADMIN </i>
+                        <i class="fa fa-music direct-icon" style='font-size:36px'> Manage Music</i>
                         <h2 class="new-music-title mb-0"></h2>
 
                         <div style="display: flex; justify-content: flex-end; margin: 10px 50px 20px 0;">
                             <a href="" class="btn btn-outline-primary py-md-2 px-md-3" style="background-color: black; ">add new</a>
                         </div>
                     </div>
-                    <div class="nav-section header-sticky" style="margin-left: 40px; margin-right: 40px; background-color:black; color:white;">
+                @foreach ($products as $webproduct)
+                    <div class="nav-section header-sticky"
+                        style="margin-left: 40px; margin-right: 40px; background-color:black; color:white;">
                         <div class="header-nav-section">
                             <div class="container">
-                                
+                                <ul class="nav menu-nav clone-main-menu"
+                                    style=" color:white; display:flex; justify-content: space-between; align-items: center;"
+                                    data-menuname="Sale Info">
+                                    <li class="menu-item"><a href="#" class="link-term"
+                                            style='font-size:24px'>{{$webproduct->title}}</a></li>
+                                    <li class="menu-item"><a href="#" class="link-term"
+                                            style='font-size:24px'>{{$webproduct-->playlist_id}}</a></li>
+                                    <li class="menu-item"><a href="#" class="link-term"
+                                            style='font-size:24px'>{{$webproduct-->image}}</a></li>
+                                    <li class="menu-item"><a href="#" class="link-term"
+                                            style='font-size:24px'>{{$webproduct-->audio}}</a></li>
+                                    <li class="menu-item"><a href="#" class="link-term"
+                                            style='font-size:24px'>Action</a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
+                @endforeach
+                </div>
+            </div>
+        </div>
 
     </div>
 

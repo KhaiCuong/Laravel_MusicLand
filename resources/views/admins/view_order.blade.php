@@ -71,15 +71,15 @@
                     <ul class="direct-list">
                         <li class="direct-item">
                             <i class="fa fa-music direct-icon"></i>
-                            <a href="" class="text-decoration-none direct-link-1"> Manage Music</a>
+                            <a href="{{ route('admin') }}" class="text-decoration-none direct-link-1"> Manage Music</a>
                         </li>
                         <li class="direct-item">
                             <i class="fas fa-user-plus direct-icon"></i>
-                            <a href="" class="text-decoration-none direct-link-2"> Manage User</a>
+                            <a href="{{ route('user.index') }}" class="text-decoration-none direct-link-2"> Manage User</a>
                         </li>
                         <li class="direct-item">
                             <i class="fas fa-id-card-alt  direct-icon"></i>
-                            <a href="" class="text-decoration-none direct-link-3"> Manage Order</a>
+                            <a href="{{ route('order') }}" class="text-decoration-none direct-link-3"> Manage Order</a>
                         </li>
 
                     </ul>
@@ -146,29 +146,7 @@
                     <div class="nav-section header-sticky" style="margin-left: 40px; margin-right: 40px; background-color:black; color:white;">
                         <div class="header-nav-section">
                             <div class="container">
-                                <table border="1">
-                                    <thead>
-                                        <tr>
-                                            <th>Order ID</th>
-                                            <th>User Name</th>
-                                            <th>user Email</th>
-                                            <th>Order Status</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        @foreach ($users as $item)
-                                       
-                                        <tr>
-                                            <td>{{$row->order}}</td>
-                                            <td>{{$row->name }}</td>
-                                            <td>{{$row->email }}</td>
-                                            <td>{{$row->status }}</td>
-                                            <td>Action</td>
-                                        </tr>
-                                        @endforeach
-                                    </tbody>
-                                </table>
+                                
                             </div>
                         </div>
                     </div>

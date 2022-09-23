@@ -72,15 +72,15 @@
                     <ul class="direct-list">
                         <li class="direct-item">
                             <i class="fa fa-music direct-icon"></i>
-                            <a href="" class="text-decoration-none direct-link-1"> Manage Music</a>
+                            <a href="{{ route('admin') }}" class="text-decoration-none direct-link-1"> Manage Music</a>
                         </li>
                         <li class="direct-item">
                             <i class="fas fa-user-plus direct-icon"></i>
-                            <a href="" class="text-decoration-none direct-link-2"> Manage User</a>
+                            <a href="{{ route('user.index') }}" class="text-decoration-none direct-link-2"> Manage User</a>
                         </li>
                         <li class="direct-item">
                             <i class="fas fa-id-card-alt  direct-icon"></i>
-                            <a href="" class="text-decoration-none direct-link-3"> Manage Order</a>
+                            <a href="{{ route('order') }}" class="text-decoration-none direct-link-3"> Manage Order</a>
                         </li>
 
                     </ul>
@@ -148,23 +148,24 @@
                             <a href="" class="btn btn-outline-primary py-md-2 px-md-3"
                                 style="background-color: black; ">add new</a>
                         </div>
-                    </div>
+                    
                   
-                                <table border="1">
-                                    <thead>
-                                        @foreach ($users as $user)
-                                            <tr>
-                                                <th>{{$user->user_id}}</th>
-                                                <th>{{$user->name}}</th>
-                                                <th>{{$user->email}}</th>
-                                                <th>{{$user->mem_card}}</th>
-                                                <th>{{$user->credit_card}}</th>
-                                        @endforeach
+                               
         
                             </div>
                         </div>
                     </div>
-                    {{-- @foreach ($users as $user)
+                    {{--<table border="1">
+                        <thead>
+                            @foreach ($user as $users)
+                                <tr>
+                                    <th>{{$users->user_id}}</th>
+                                    <th>{{$users->name}}</th>
+                                    <th>{{$users->email}}</th>
+                                    <th>{{$users->mem_card}}</th>
+                                    <th>{{$users->credit_card}}</th>
+                            @endforeach--}}
+                     @foreach ($user as $User)
                         <div class="nav-section header-sticky"
                             style="margin-left: 40px; margin-right: 40px; background-color:black; color:white;">
                             <div class="header-nav-section">
@@ -173,20 +174,20 @@
                                         style=" color:white; display:flex; justify-content: space-between; align-items: center;"
                                         data-menuname="Sale Info">
                                         <li class="menu-item"><a href="#" class="link-term"
-                                                style='font-size:24px'>{{$user->user_id}}</a></li>
+                                                style='font-size:24px'>{{$User->id}}</a></li>
                                         <li class="menu-item"><a href="#" class="link-term"
-                                                style='font-size:24px'>{{$user->name}}</a></li>
+                                                style='font-size:24px'>{{$User->name}}</a></li>
                                         <li class="menu-item"><a href="#" class="link-term"
-                                                style='font-size:24px'>{{$user->email}}</a></li>
+                                                style='font-size:24px'>{{$User->email}}</a></li>
                                         <li class="menu-item"><a href="#" class="link-term"
-                                                style='font-size:24px'>{{$user->mem_card}}</a></li>
+                                                style='font-size:24px'>{{$User->email_verified_at}}</a></li>
                                         <li class="menu-item"><a href="#" class="link-term"
                                                 style='font-size:24px'>Action</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                    @endforeach --}}
+                    @endforeach 
 
                 </div>
             </div>

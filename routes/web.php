@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthenticationController;
 use App\Http\Controller\HomeControllers;
+use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\RegisterController;
 
@@ -22,19 +23,20 @@ Route::get('/', function () {
 })->name('home');
 
 
-Route::get('/admin', function () {
-    return view('admins.admin');
-});
+ Route::get('/product', [ProductController::class,'index'])->name('product');
+
 
 
 Route::get('/vieworder', function () {
     return view('admins.view_order');
-})->name('order'); 
-
+})->name('order');
+// Route::resource('product',ProductController::class)->except('destroy');
 
 Route::resource('user', UserController::class);
 
-
+Route::get('/admin', function () {
+    return view('admins.admin');
+ })->name('admin');
 
 
 
