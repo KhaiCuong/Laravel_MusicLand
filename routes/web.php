@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthenticationController;
-
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RegisterController;
 /*
 |--------------------------------------------------------------------------
@@ -14,10 +14,8 @@ use App\Http\Controllers\RegisterController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', [HomeController::class, 'home'])->name('home');
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
 
 
 Route::get('/admin', function () {

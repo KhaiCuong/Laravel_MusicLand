@@ -34,8 +34,6 @@
                 </div>
             </div>
         </div>
-
-
     </div>
 </div>
 
@@ -45,15 +43,20 @@
         <h2 class="new-music-title mb-0">Fresh new music</h2>
         <p style="font-size: 20px ; font-weight: 600; margin: 0 14px 0 0 ;"> See all</p>
     </div>
-    <div class="row px-xl-5 pb-3 mt-3" style="display: flex; justify-content: space-around;">
-        <div class="col-lg-2 col-md-6 pb-1">
-            <a href="" class="cat-img position-relative overflow-hidden mb-3 border-radius-6">
-                <img class="img-fluid border-radius-6" style="height: 210px;" src="img/song-1.jpg" alt="">
+
+    <div class="row px-xl-5 pb-3 mt-3 list-song" style="display: flex; justify-content: space-around; ">
+
+        @foreach($prods as $item)
+        <div class="col-lg-2 col-md-6 pb-1 imusic">
+            <a href="" class="cat-img position-relative overflow-hidden mb-3 border-radius-6 ">
+                <img class="img-fluid border-radius-6" style="height: 210px; " src="{{ 'img'.'/'.$item->photo }}" alt="">
 
             </a>
-            <h5 class=" mt-2 " style="color: white; ">Song 1 </h5>
+            <p class="mt-2 name-song" style="color: white; ">{{ $item->name }}</p>
         </div>
-        <div class="col-lg-2 col-md-6 pb-1">
+        @endforeach
+
+        <!-- <div class="col-lg-2 col-md-6 pb-1">
             <a href="" class="cat-img position-relative overflow-hidden mb-3">
                 <img class="img-fluid" src="img/cat-1.jpg" alt="">
             </a>
@@ -79,7 +82,7 @@
                 <img class="img-fluid" src="img/cat-1.jpg" alt="">
             </a>
             <h5 class=" mt-2 " style="color: white;">Music </h5>
-        </div>
+        </div> -->
     </div>
 
     <div class=" offer pt-5">
@@ -116,11 +119,11 @@
         <p style="font-size: 20px ; font-weight: 600; margin: 0 14px 0 0 ;"> See all</p>
     </div>
     <div class="row px-xl-5 pb-3 mt-3" style="display: flex; justify-content: space-around;">
-        <div class="col-lg-2 col-md-6 pb-1 " style="  background-color: rgba(180, 169, 169, 0.1);">
+        <div class="col-lg-2 col-md-6 pb-1  " style="  background-color: rgba(180, 169, 169, 0.1);">
             <a href="" class="cat-img position-relative overflow-hidden mb-3 border-radius-6">
                 <img class="img-fluid border-radius-50 mt-3" style="height: 180px; width: 180px;" src="img/sontung.jpg" alt="">
             </a>
-            <h5 class=" mt-4" style="color: white; text-align: center;">Artists </h5>
+            <h5 class=" mt-4" style="color: white; text-align: center;">Artists</h5>
         </div>
         <div class="col-lg-2 col-md-6 pb-1" style="  background-color: rgba(180, 169, 169, 0.1);">
             <a href="" class="cat-img position-relative overflow-hidden mb-3 border-radius-6">
@@ -304,10 +307,7 @@
 
         <div id="content" class="bar-song pt-4" style="height: 60px; width:50%; position:relative">
             <div id="range" class="progress" style="background-color:purer ; height: 4px; cursor: pointer;">
-
-
                 <input type="range" class="progress-bar" style="background-color:black ;" value="143" min="0" max="143">
-
             </div>
 
 
@@ -328,7 +328,7 @@
 
             </div>
             <div id="total-time">
-                <span class="duration-time">02:33</span>
+                <span class="duration-time"></span>
             </div>
         </div>
         <audio id="audio">
@@ -352,16 +352,20 @@
             const musicContent = document.querySelector(".music-content");
             const progressBar = document.querySelector(".progress-bar");
             const currentTimeDisplay = document.querySelector(".current-time");
+            const imusics = document.querySelector(".imusic");
+
+
+
             // btnPlay.onclick = function() {
             //     audio.play()
             // };
             let allMusic = [{
-                    name: "song-1",
+                    name: "song-2",
                     artist: "YOASOBI",
                     img: "img/song-1.jpg",
                 },
                 {
-                    name: "song-2",
+                    name: "song-1",
                     artist: "YOASOBI",
                     img: "img/song-2.jpg",
                 },
@@ -370,11 +374,17 @@
                     artist: "YOASOBI",
                     img: "img/song-3.jpg",
                 },
+                {
+                    name: "song-4",
+                    artist: "YOASOBI",
+                    img: "img/song-4.jpg",
+                },
             ];
             class UI {
                 constructor() {
                     this.songIndex = 0;
                 }
+
 
                 getDuration(music) {
                     return new Promise(function(resolve) {
@@ -385,6 +395,30 @@
                         });
                     });
                 }
+                // async setSongs() {
+                //     songs.innerHTML = '';
+
+                //     for (let i = 1; i < allMusic.length; i++) {
+                //         const music = new Audio(`audio/${allMusic[i].name}.mp3`);
+                //         const time = await this.getDuration(music);
+                //         // const time = { time: await this.getDuration(music) };
+                //         // allMusic[i] = { ...allMusic[i], ...time };
+
+                //         songs.insertAdjacentHTML(
+                //             "beforeend",
+                //             `<div class="song-info" style="cursor: pointer;" > 
+                //     <div class="left">
+                //         <span class="name-song">${allMusic[i].name}</span>
+                //         <span class="author">${allMusic[i].artist}</span>
+                //     </div>
+                //     <div class="right">
+                //         <span class="minutes">${time}</span>
+                //     </div>
+                // </div>`
+                //         );
+                //     }
+                // }
+
                 loadSong(music) {
 
                     audio.src = `audio/${music.name}.mp3`;
@@ -392,7 +426,8 @@
                         nameSong.textContent = music.name;
                         artist.textContent = music.artist;
                         thumbnailSong.src = `img/${music.name}.jpg`;
-                        timeSong.textContent = time;
+                        // timeSong.textContent = time;
+                        timeSong.textContent = formatTime(30);
                     });
                 }
                 // async setSongs() {
@@ -404,6 +439,7 @@
                     btnPlay.querySelector('.fa').classList.remove('fa-play');
                     btnPlay.querySelector('.fa').classList.add('fa-pause');
                     audio.play();
+
                 };
                 pauseSong() {
                     musicContent.classList.remove('playing');
@@ -426,17 +462,40 @@
                     }
                     this.loadSong(allMusic[this.songIndex]);
                 }
+
+                // updateProgress(e) {
+                //     const {
+                //         currentTime,
+                //         duration
+                //     } = e.srcElement;
+                //     const percentWidth = (currentTime / duration) * 100;
+                //     progressBar.style.width = `${percentWidth}%`;
+                //     const time = formatTime(currentTime);
+                //     currentTimeDisplay.textContent = time;
+                // }
+                // set progress
+                // setProgress(e) {
+                //     const width = e.offsetX;
+                //     const progress = e.currentTarget;
+                //     const progressBarWidth = (width / progress.clientWidth) * 100;
+                //     progressBar.style.width = `${progressBarWidth}%`;
+                //     let {
+                //         duration
+                //     } = audio;
+                //     audio.currentTime = (width * duration) / progress.clientWidth;
+                // }
+
                 updateProgress(e) {
                     const {
                         currentTime,
                         duration
                     } = e.srcElement;
-                    const percentWidth = (currentTime / duration) * 100;
+                    const percentWidth = (currentTime / 30) * 100;
                     progressBar.style.width = `${percentWidth}%`;
                     const time = formatTime(currentTime);
                     currentTimeDisplay.textContent = time;
                 }
-                // set progress
+
                 setProgress(e) {
                     const width = e.offsetX;
                     const progress = e.currentTarget;
@@ -445,24 +504,51 @@
                     let {
                         duration
                     } = audio;
-                    audio.currentTime = (width * duration) / progress.clientWidth;
+                    audio.currentTime = (width * 30) / progress.clientWidth;
+                    setTimeout(pauseSong, 31000 - audio.currentTime);
+                      
+                }
+                selectSong(e) {
+                    const nameSong = e.target.querySelector('.name-song').textContent;
+                    const song = allMusic.find((audio) => audio.name === nameSong);
+
+                    this.loadSong(song);
+                    this.playSong();
+
                 }
             }
+
+
             document.addEventListener("DOMContentLoaded", eventListeners);
+
 
             function eventListeners() {
                 const ui = new UI();
                 // load song
                 ui.loadSong(allMusic[ui.songIndex]);
+
+                audio.addEventListener("loadedmetadata", function() {
+                    setTimeout(function() {
+                            ui.pauseSong()
+                        },
+                        31000);
+
+                }, false);
+
                 btnPlay.addEventListener("click", function() {
                     if (musicContent.classList.contains("playing")) {
                         ui.pauseSong();
                     } else {
                         ui.playSong();
+
+
                     }
                 });
+                // ui.setSongs();
+
                 // previous song
                 btnBack.addEventListener("click", function() {
+
                     ui.prevSong();
                     ui.playSong();
                 });
@@ -477,6 +563,15 @@
                 // set progress
                 progress.addEventListener("click", function(e) {
                     ui.setProgress(e);
+
+                 
+                });
+
+
+                songs.addEventListener('click', function(e) {
+
+                    ui.selectSong(e);
+
                 });
             }
 
