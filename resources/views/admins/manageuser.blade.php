@@ -76,7 +76,8 @@
                         </li>
                         <li class="direct-item">
                             <i class="fas fa-user-plus direct-icon"></i>
-                            <a href="{{ route('user.index') }}" class="text-decoration-none direct-link-2"> Manage User</a>
+                            <a href="{{ route('user.index') }}" class="text-decoration-none direct-link-2"> Manage
+                                User</a>
                         </li>
                         <li class="direct-item">
                             <i class="fas fa-id-card-alt  direct-icon"></i>
@@ -148,14 +149,14 @@
                             <a href="" class="btn btn-outline-primary py-md-2 px-md-3"
                                 style="background-color: black; ">add new</a>
                         </div>
-                    
-                  
-                               
-        
-                            </div>
-                        </div>
+
+
+
+
                     </div>
-                    {{--<table border="1">
+                </div>
+            </div>
+            {{-- <table border="1">
                         <thead>
                             @foreach ($user as $users)
                                 <tr>
@@ -164,34 +165,38 @@
                                     <th>{{$users->email}}</th>
                                     <th>{{$users->mem_card}}</th>
                                     <th>{{$users->credit_card}}</th>
-                            @endforeach--}}
-                     @foreach ($user as $User)
-                        <div class="nav-section header-sticky"
-                            style="margin-left: 40px; margin-right: 40px; background-color:black; color:white;">
-                            <div class="header-nav-section">
-                                <div class="container">
-                                    <ul class="nav menu-nav clone-main-menu"
-                                        style=" color:white; display:flex; justify-content: space-between; align-items: center;"
-                                        data-menuname="Sale Info">
-                                        <li class="menu-item"><a href="#" class="link-term"
-                                                style='font-size:24px'>{{$User->id}}</a></li>
-                                        <li class="menu-item"><a href="#" class="link-term"
-                                                style='font-size:24px'>{{$User->name}}</a></li>
-                                        <li class="menu-item"><a href="#" class="link-term"
-                                                style='font-size:24px'>{{$User->email}}</a></li>
-                                        <li class="menu-item"><a href="#" class="link-term"
-                                                style='font-size:24px'>{{$User->email_verified_at}}</a></li>
-                                        <li class="menu-item"><a href="#" class="link-term"
-                                                style='font-size:24px'>Action</a></li>
-                                    </ul>
-                                </div>
-                            </div>
+                            @endforeach --}}
+            @foreach ($user as $User)
+                <div class="nav-section header-sticky"
+                    style="margin-left: 40px; margin-right: 40px; background-color:black; color:white;">
+                    <div class="header-nav-section">
+                        <div class="container">
+                            <ul class="nav menu-nav clone-main-menu"
+                                style=" color:white; display:flex; justify-content: space-between; align-items: center;"
+                                data-menuname="Sale Info">
+                                <li class="menu-item"><a href="#" class="link-term"
+                                        style='font-size:24px'>{{ $User->id }}</a></li>
+                                <li class="menu-item"><a href="#" class="link-term"
+                                        style='font-size:24px'>{{ $User->email }}</a></li>
+                                <li class="menu-item"><a href="#" class="link-term"
+                                        style='font-size:24px'>{{ $User->password }}</a></li>
+                                <li class="menu-item"><a href="#" class="link-term"
+                                        style='font-size:24px'>{{ $User->name }}</a></li>
+                                <li class="menu-item"><a href="#" class="link-term"
+                                        style='font-size:24px'>{{ $User->credit_card }}</a></li>
+                                <li class="menu-item"><a href="#" class="link-term"
+                                        style='font-size:24px'>{{ $User->mem_card }}</a></li>
+                                <li class="menu-item"><a href="#" class="link-term"
+                                        style='font-size:24px'>Action</a></li>
+                            </ul>
                         </div>
-                    @endforeach 
-
+                    </div>
                 </div>
-            </div>
+            @endforeach
+
         </div>
+    </div>
+    </div>
 
     </div>
 

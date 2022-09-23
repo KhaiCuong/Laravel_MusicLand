@@ -152,13 +152,13 @@
                                     style=" color:white; display:flex; justify-content: space-between; align-items: center;"
                                     data-menuname="Sale Info">
                                     <li class="menu-item"><a href="#" class="link-term"
-                                            style='font-size:24px'>{{$webproduct->title}}</a></li>
-                                    <li class="menu-item"><a href="#" class="link-term"
-                                            style='font-size:24px'>{{$webproduct-->playlist_id}}</a></li>
-                                    <li class="menu-item"><a href="#" class="link-term"
-                                            style='font-size:24px'>{{$webproduct-->image}}</a></li>
+                                            style='font-size:24px'>{{$webproduct->name}}</a></li>
                                     <li class="menu-item"><a href="#" class="link-term"
                                             style='font-size:24px'>{{$webproduct-->audio}}</a></li>
+                                    <li class="menu-item"><a href="#" class="link-term"
+                                            style='font-size:24px'>{{$webproduct-->photo}}</a></li>
+                                    <li class="menu-item"><a href="#" class="link-term"
+                                            style='font-size:24px'>{{$webproduct-->artist}}</a></li>
                                     <li class="menu-item"><a href="#" class="link-term"
                                             style='font-size:24px'>Action</a></li>
                                 </ul>

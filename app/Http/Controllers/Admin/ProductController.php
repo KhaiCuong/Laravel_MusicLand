@@ -16,7 +16,7 @@ class ProductController extends Controller
     public function index()
     {
         $products = Product::all();
-        dd($products);
+        
         return view('admins.product', compact('products'));
     }
 
@@ -38,7 +38,22 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if ($request->hasFile('photo')) {
+            $file = $request->file('photo');
+            $extension = $file->getClientOriginalExtension();
+            if ($extension != 'jpg' && $extension != 'png' && $extension != 'jpeg') {
+                return redirect()->route('admins.product.index')->with('Error', 'Ban chi dinh sai duong dan');
+            }
+            $imageName = $file->getClientOriginalName();
+            $file->move("img", $imageName);
+        } else {
+            $imageName = null;
+        }
+        $p = new Product($products);
+        $p->photo = $imageName;
+        $p->slug =($p->name);
+        $p->save();
+        return redirect()->route('admins.product.index');
     }
 
     /**
