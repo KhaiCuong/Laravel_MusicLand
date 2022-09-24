@@ -101,5 +101,8 @@
         button.parent().parent().find('input').val(newVal);
     });
     
+    
+        
+    
 })(jQuery);
 

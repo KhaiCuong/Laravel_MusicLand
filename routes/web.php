@@ -2,8 +2,16 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthenticationController;
+
+use App\Http\Controller\HomeControllers;
+use App\Http\Controllers\Admin\OrderController;
+use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\UserController;
+
 use App\Http\Controllers\HomeController;
+
 use App\Http\Controllers\RegisterController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,11 +26,20 @@ Route::get('/', [HomeController::class, 'home'])->name('home');
 
 
 
+ Route::get('/product', [ProductController::class,'index'])->name('product');
+ Route::get('/order' , [OrderController::class, 'index'])->name('order');
+
+
+// Route::get('/order', function () {
+//     return view('admins.order');
+// })->name('order');
+// Route::resource('product',ProductController::class)->except('destroy');
+
+Route::resource('user', UserController::class);
+
 Route::get('/admin', function () {
     return view('admins.admin');
-});
-
-
+ })->name('admin');
 
 
 

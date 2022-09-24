@@ -13,7 +13,8 @@
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -71,11 +72,12 @@
                     <ul class="direct-list">
                         <li class="direct-item">
                             <i class="fa fa-music direct-icon"></i>
-                            <a href="{{ route('product') }}" class="text-decoration-none direct-link-1"> Manage Music</a>
+                            <a href="{{ route('admin') }}" class="text-decoration-none direct-link-1"> Manage Music</a>
                         </li>
                         <li class="direct-item">
                             <i class="fas fa-user-plus direct-icon"></i>
-                            <a href="{{ route('user.index') }}" class="text-decoration-none direct-link-2"> Manage User</a>
+                            <a href="{{ route('user.index') }}" class="text-decoration-none direct-link-2"> Manage
+                                User</a>
                         </li>
                         <li class="direct-item">
                             <i class="fas fa-id-card-alt  direct-icon"></i>
@@ -92,16 +94,20 @@
         </div>
         <div class="col-lg-10" style="padding-left: 0px; padding-right:0;  height: 1000px">
 
-            <div class="align-items-center py-3 top-bar" style="background: linear-gradient(80deg,rgb(45,3,43),rgb(25,0,1) ); height: 70px; top:0;  position: sticky; left:cacl(2*100/12); width:100%; z-index: 10;">
+            <div class="align-items-center py-3 top-bar"
+                style="background: linear-gradient(80deg,rgb(45,3,43),rgb(25,0,1) ); height: 70px; top:0;  position: sticky; left:cacl(2*100/12); width:100%; z-index: 10;">
                 <div class="col-lg-6 col-6 text-left">
                     <form action="" style="width: 40%;">
                         <div class="input-group" style="border-radius: 50%">
-                            <div class="input-group-append" style="background-color:#3e2744; border-top-left-radius: 50%; border-bottom-left-radius: 50%;">
+                            <div class="input-group-append"
+                                style="background-color:#3e2744; border-top-left-radius: 50%; border-bottom-left-radius: 50%;">
                                 <span class="input-group-text bg-transparent " style="border-style:none;">
                                     <i class="fa fa-search" style=" color:white;"></i>
                                 </span>
                             </div>
-                            <input type="text" class="form-control" style="border-top-right-radius: 20px;  border-style:none; border-bottom-right-radius: 20px;" placeholder="Search for products">
+                            <input type="text" class="form-control"
+                                style="border-top-right-radius: 20px;  border-style:none; border-bottom-right-radius: 20px;"
+                                placeholder="Search for products">
                         </div>
                     </form>
                 </div>
@@ -136,20 +142,61 @@
             <div class=" mt-0" style="padding-left: 0px; ">
                 <div class=" offer pt-5">
                     <div class="pl-5 m-3 mb-4 ">
-                        <i class="fa fa-group direct-icon" style='font-size:36px'> ADMIN </i>
+                        <i class="fa fa-music direct-icon" style='font-size:36px'> Manage User</i>
                         <h2 class="new-music-title mb-0"></h2>
 
                         <div style="display: flex; justify-content: flex-end; margin: 10px 50px 20px 0;">
-                            <a href="" class="btn btn-outline-primary py-md-2 px-md-3" style="background-color: black; ">add new</a>
+                            <a href="" class="btn btn-outline-primary py-md-2 px-md-3"
+                                style="background-color: black; ">add new</a>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+            {{-- <table border="1">
+                        <thead>
+                            @foreach ($user as $users)
+                                <tr>
+                                    <th>{{$users->user_id}}</th>
+                                    <th>{{$users->name}}</th>
+                                    <th>{{$users->email}}</th>
+                                    <th>{{$users->mem_card}}</th>
+                                    <th>{{$users->credit_card}}</th>
+                            @endforeach --}}
+            @foreach ($user as $User)
+                <div class="nav-section header-sticky"
+                    style="margin-left: 40px; margin-right: 40px; background-color:black; color:white;">
+                    <div class="header-nav-section">
+                        <div class="container">
+                            <ul class="nav menu-nav clone-main-menu"
+                                style=" color:white; display:flex; justify-content: space-between; align-items: center;"
+                                data-menuname="Sale Info">
+                                <li class="menu-item"><a href="#" class="link-term"
+                                        style='font-size:24px'>{{ $User->id }}</a></li>
+                                <li class="menu-item"><a href="#" class="link-term"
+                                        style='font-size:24px'>{{ $User->email }}</a></li>
+                                <li class="menu-item"><a href="#" class="link-term"
+                                        style='font-size:24px'>{{ $User->password }}</a></li>
+                                <li class="menu-item"><a href="#" class="link-term"
+                                        style='font-size:24px'>{{ $User->name }}</a></li>
+                                <li class="menu-item"><a href="#" class="link-term"
+                                        style='font-size:24px'>{{ $User->credit_card }}</a></li>
+                                <li class="menu-item"><a href="#" class="link-term"
+                                        style='font-size:24px'>{{ $User->mem_card }}</a></li>
+                                <li class="menu-item"><a href="#" class="link-term"
+                                        style='font-size:24px'>Action</a></li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="nav-section header-sticky" style="margin-left: 40px; margin-right: 40px; background-color:black; color:white;">
-                        <div class="header-nav-section">
-                            <div class="container">
-                                
-                            </div>
-                        </div>
-                    </div>
+                </div>
+            @endforeach
+
+        </div>
+    </div>
+    </div>
 
     </div>
 

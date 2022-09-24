@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Product;
+use App\Models\Order;
 use Illuminate\Http\Request;
 
-class ProductController extends Controller
+class OrderController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +15,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::all();
-        
-        return view('admins.product', compact('products'));
+        $order = Order::get();
+        return view('admins.order' , compact('order'));
     }
 
     /**
@@ -38,22 +37,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        if ($request->hasFile('photo')) {
-            $file = $request->file('photo');
-            $extension = $file->getClientOriginalExtension();
-            if ($extension != 'jpg' && $extension != 'png' && $extension != 'jpeg') {
-                return redirect()->route('admins.product.index')->with('Error', 'Ban chi dinh sai duong dan');
-            }
-            $imageName = $file->getClientOriginalName();
-            $file->move("img", $imageName);
-        } else {
-            $imageName = null;
-        }
-        $p = new Product();
-        $p->photo = $imageName;
-        $p->slug =($p->name);
-        $p->save();
-        return redirect()->route('admins.product.index');
+        //
     }
 
     /**

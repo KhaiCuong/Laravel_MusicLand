@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Product;
+use App\Models\User;
 use Illuminate\Http\Request;
 
-class ProductController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +15,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::all();
-        
-        return view('admins.product', compact('products'));
+        $user = User::get();
+        return view('admins.manageuser', compact('user'));
     }
 
     /**
@@ -38,31 +37,16 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        if ($request->hasFile('photo')) {
-            $file = $request->file('photo');
-            $extension = $file->getClientOriginalExtension();
-            if ($extension != 'jpg' && $extension != 'png' && $extension != 'jpeg') {
-                return redirect()->route('admins.product.index')->with('Error', 'Ban chi dinh sai duong dan');
-            }
-            $imageName = $file->getClientOriginalName();
-            $file->move("img", $imageName);
-        } else {
-            $imageName = null;
-        }
-        $p = new Product();
-        $p->photo = $imageName;
-        $p->slug =($p->name);
-        $p->save();
-        return redirect()->route('admins.product.index');
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(User $user)
     {
         //
     }
@@ -70,10 +54,10 @@ class ProductController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(User $user)
     {
         //
     }
@@ -82,10 +66,10 @@ class ProductController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, User $user)
     {
         //
     }
@@ -93,10 +77,10 @@ class ProductController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(User $user)
     {
         //
     }

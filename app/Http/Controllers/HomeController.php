@@ -9,6 +9,12 @@ use Auth;
 class HomeController extends Controller
 {
 
+
+    
+     
+
+   
+
     public function home(Request $request)
     {
 
@@ -19,4 +25,5 @@ class HomeController extends Controller
             'latestProds' => $latestProds,
         ]);
     }
+
 }
