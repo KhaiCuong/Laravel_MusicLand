@@ -22,6 +22,7 @@ body {
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
 }
 
+
 #content #Click{
   width: 20px;
   margin: 0 auto;
@@ -1040,7 +1041,7 @@ legend {
   }
 }
 
-progress {
+.progress, .progress-demo {
   vertical-align: baseline;
 }
 
@@ -5676,7 +5677,7 @@ a.badge-dark:focus, a.badge-dark.focus {
   }
 }
 
-.progress {
+.progress , .progress-demo {
   display: flex;
   height: 1rem;
   overflow: hidden;

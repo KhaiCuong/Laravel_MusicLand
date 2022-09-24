@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Session;
 use Illuminate\Http\Request;
 use Sentinel;
 
@@ -22,17 +23,17 @@ class AuthenticationController extends Controller
 
 
         return view('authentication.login');
-
     }
 
     public function processLogin(Request $request)
     {
-        $credentials = [
-            'email'    => $request->email,
-            'password' => $request->password,
-        ];
-        if ($user = Sentinel::authenticate($credentials)) {
-            $user = Sentinel::getUser();
+        $request->validate([
+            'email' => 'required',
+            'password' => 'required'
+        ]);
+        $credentials = $request->only('email','password');
+        if (Auth::attempt($credentials)) {
+
             // $role = Sentinel::getRoleRepository()->findBySlug('admin');
 
             // if(!$user->inRole($role)){
@@ -41,24 +42,28 @@ class AuthenticationController extends Controller
             //     return redirect()->route('home');
             // }
             return redirect()->route('home');
-           
-        // } else {
-        //     // wrong username or password
-        //     return view('authentication.login');
+        } else {
+            //     // wrong username or password
+            return view('authentication.login');
 
-        //     if (!$user->inRole($role)) {
-        //         return redirect()->route('home');
-        //     }
+            //     if (!$user->inRole($role)) {
+            //         return redirect()->route('home');
+            //     }
             // } else {
             //     return redirect()->route('admin.index');
             // }
 
-        // else {
+            // else {
             // wrong username or password
-        //     return view('authentication.login');
+            //     return view('authentication.login');
 
-        // }
-     
+        }
     }
-}
+
+    public function logout() {
+;
+        Auth::logout();
+        return redirect()->route('home');
+    }
+
 }

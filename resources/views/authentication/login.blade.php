@@ -68,11 +68,11 @@
                         <li class="direct-item">
 
                             <i class="fas fa-sign-in-alt direct-icon"></i>
-                            <a href="" class="text-decoration-none direct-link-1">Login</a>
+                            <a href="{{ route('login') }}" class="text-decoration-none direct-link-1">Login</a>
                         </li>
                         <li class="direct-item">
                             <i class="fas fa-file-signature direct-icon "></i>
-                            <a href="/admin.blade.php" class="text-decoration-none direct-link-2"> Register</a>
+                            <a href="{{ route('register.index')  }}" class="text-decoration-none direct-link-2"> Register</a>
                         </li>
 
                     </ul>

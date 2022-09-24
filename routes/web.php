@@ -29,19 +29,21 @@ Route::get('/admin', function () {
 
 Route::get('/l', function () {
     return view('mylibrary');
-});
+})->name('mylibrary');
 
 Route::get('/p', function () {
     return view('playlist');
-});
+})->name('playlist');
 
 Route::get('/login', [AuthenticationController::class, 'login'])->name('login');
+Route::get('/logout', [AuthenticationController::class, 'logout'])->name('logout');
+
 
 Route::post('/login', [AuthenticationController::class, 'processLogin'])->name('processLogin');
 
 
 
-Route::resource('/register', RegisterController::class);
+Route::resource('register', RegisterController::class);
 
 
 

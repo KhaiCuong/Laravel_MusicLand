@@ -58,23 +58,35 @@
                     <a href="" class="text-decoration-none">
                         <h1 class="m-0 display-5 " style="color: white; font-size:25px ;">
                             <image class=" img-logo border mr-1" src="img/logo.jpg"></image>
-                            <p class="web-name"> MusicLand</p>
+                            <p class="web-name"> <a href="{{ route('home') }}">MusicLand</a> </p>
 
                         </h1>
                     </a>
                 </div>
                 <div class=" mt-5" style="padding-left:0;">
-                    <ul class="direct-list">
+                @if(Auth::check())
+                <ul class="direct-list">
                         <li class="direct-item">
                             <i class="fas fa-chart-line direct-icon"></i>
-                            <a href="" class="text-decoration-none direct-link-1">Top Trending</a>
+                            <a href="{{ route('playlist') }}" class="text-decoration-none direct-link-1">Top Trending</a>
                         </li>
                         <li class="direct-item">
                             <i class="fas fa-heart direct-icon "></i>
-                            <a href="admins/admin.blade.php" class="text-decoration-none direct-link-2"> My Library</a>
+                            <a href="{{ route('mylibrary') }}" class="text-decoration-none direct-link-2">My Library</a>
                         </li>
 
                     </ul>
+                @else
+                <ul class="direct-list">
+                        <li class="direct-item">
+                            <i class="fas fa-chart-line direct-icon"></i>
+                            <a href="{{ route('playlist') }}" class="text-decoration-none direct-link-1">Top Trending</a>
+                        </li>
+                 
+
+                    </ul>
+                @endif
+                    
 
 
                 </div>
@@ -98,12 +110,18 @@
                         </div>
                     </form>
                 </div>
+       
+
+                @if(Auth::check())
                 <div class="login">
                     <img src="img/acc1.jpg" alt="img" class="account-img">
-
+                @else
+                <div class="login">
+                <img src="img/logo.jpg" alt="img" class="account-img">
+                @endif
 
                     <div class="acc-profile">
-
+                    @if(Auth::check())
                         <ul class="acc-list">
                             <li class="acc-item" style="margin-top: 6px;">
                                 <i class="fa fa-cog" aria-hidden="true"></i>
@@ -116,9 +134,19 @@
                             <hr style="margin: 0; background-color: #888;">
                             <li class="acc-item" style="margin: 6px 0;">
                                 <i class="fa fa-toggle-off" aria-hidden="true"></i>
-                                <span style="margin-left:6px;">log out</span>
+                                <span style="margin-left:6px;"><a href="{{ route('logout') }}">log out</a></span>
                             </li>
                         </ul>
+                        @else
+                        <ul class="acc-list">
+                        
+                            <li class="acc-item" style="margin: 6px 0;">
+                                <i class="fa fa-toggle-off" aria-hidden="true"></i>
+                                <span style="margin-left:6px;"><a href="{{ route('login') }}">log in</a></span>
+                            </li>
+                        </ul>
+                        @endif
+
                     </div>
                 </div>
             </div>
