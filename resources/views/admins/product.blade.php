@@ -152,8 +152,8 @@
                         </div>
                     </div>
                     @foreach ($products as $webproduct)
-                        {{-- <div class="nav-section header-sticky" --}}
-                            {{-- style="margin-left: 40px; margin-right: 40px; background-color:black; color:white;">
+                        <div class="nav-section header-sticky" --}}
+                        style="margin-left: 40px; margin-right: 40px; background-color:black; color:white;">
                             <div class="header-nav-section">
                                 <div class="container">
                                     <ul class="nav menu-nav clone-main-menu"
@@ -163,22 +163,22 @@
                                                 style='font-size:24px'>{{ $webproduct->name }}</a></li>
                                         <li class="menu-item"><a href="#" class="link-term"
                                                 style='font-size:24px'>{{ $webproduct->audio }}</a></li>
-                                        <li class="menu-item"><img src="{{ asset('img').'/'.$webproduct->photo }}" style="width:200px; height:auto; " alt=""><a href="#" class="link-term"
-                                                style='font-size:24px'>{{ $webproduct->photo }}
-                                            </a></li>
+                                        <li class="box"><a
+                                                style='font-size:24px'>{{ $webproduct->photo }}</a>
+                                            </li>
                                         <li class="menu-item"><a href="#" class="link-term"
                                                 style='font-size:24px'>{{ $webproduct->artist }}</a></li>
                                         <li class="menu-item"><a href="#" class="link-term"
                                                 style='font-size:24px'>Action</a></li>
                                     </ul>
                                 </div>
-                            </div> --}}
-                        {{-- </div> --}}
-                        <table border="1">
+                            </div>
+                         </div>
+                        {{-- <table border="1">
                             <tr>
-                                <th></th>
-                                <th></th>
-                                <th></th>
+                                <th>name</th>
+                                <th>audio</th>
+                                <th>photo</th>
                             </tr>
                             <tr>
                                 <td>{{ $webproduct -> name}}</td>
@@ -190,7 +190,18 @@
                                 <td>{{ $webproduct -> artist}}</td>
                             </tr>
                             
-                        </table>
+                        </table> --}}
+                        {{-- <div class="col-md-6">
+                            <div class="box">
+
+                                <h6 style="display: flex; justify-content: space-between;">{{ $webproduct->name }}</h6>
+                                <h6>{{ $webproduct->audio }}</h6>
+
+                                <img src="{{ asset('img') . '/' . $webproduct->photo }}">
+
+
+                            </div>
+                        </div> --}}
                     @endforeach
                 </div>
             </div>
