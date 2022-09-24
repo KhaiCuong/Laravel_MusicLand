@@ -49,7 +49,7 @@ class ProductController extends Controller
         } else {
             $imageName = null;
         }
-        $p = new Product($products);
+        $p = new Product();
         $p->photo = $imageName;
         $p->slug =($p->name);
         $p->save();
