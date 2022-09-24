@@ -136,7 +136,7 @@
             <div class=" mt-0" style="padding-left: 0px; ">
                 <div class=" offer pt-5">
                     <div class="pl-5 m-3 mb-4 ">
-                        <i class="fa fa-music direct-icon" style='font-size:36px'> ADMIN </i>
+                        <i class="fa fa-group direct-icon" style='font-size:36px'> ADMIN </i>
                         <h2 class="new-music-title mb-0"></h2>
 
                         <div style="display: flex; justify-content: flex-end; margin: 10px 50px 20px 0;">

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthenticationController;
 
 use App\Http\Controller\HomeControllers;
+use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\UserController;
 
@@ -26,12 +27,12 @@ Route::get('/', [HomeController::class, 'home'])->name('home');
 
 
  Route::get('/product', [ProductController::class,'index'])->name('product');
+ Route::get('/order' , [OrderController::class, 'index'])->name('order');
 
 
-
-Route::get('/vieworder', function () {
-    return view('admins.view_order');
-})->name('order');
+// Route::get('/order', function () {
+//     return view('admins.order');
+// })->name('order');
 // Route::resource('product',ProductController::class)->except('destroy');
 
 Route::resource('user', UserController::class);

@@ -151,6 +151,27 @@
                                 style="background-color: black; ">add new</a>
                         </div>
                     </div>
+                    <div class="nav-section header-sticky" --}}
+                        style="margin-left: 40px; margin-right: 40px; background-color:black; color:white;">
+                            <div class="header-nav-section">
+                                <div class="container">
+                                    <ul class="nav menu-nav clone-main-menu"
+                                        style=" color:white; display:flex; justify-content: space-between; align-items: center;"
+                                        data-menuname="Sale Info">
+                                        <li class="menu-item"><a href="#" class="link-term"
+                                                style='font-size:24px'>Name</a></li>
+                                        <li class="menu-item"><a href="#" class="link-term"
+                                                style='font-size:24px'>Audio</a></li>
+                                        <li class="box"><a
+                                                style='font-size:24px'>Photo</a>
+                                            </li>
+                                        <li class="menu-item"><a href="#" class="link-term"
+                                                style='font-size:24px'>Artist</a></li>
+                                        <li class="menu-item"><a href="#" class="link-term"
+                                                style='font-size:24px'>Action</a></li>
+                                    </ul>
+                                </div>
+                            </div>
                     @foreach ($products as $webproduct)
                         <div class="nav-section header-sticky" --}}
                         style="margin-left: 40px; margin-right: 40px; background-color:black; color:white;">
