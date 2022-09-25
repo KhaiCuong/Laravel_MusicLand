@@ -13,8 +13,7 @@
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -72,13 +71,11 @@
                     <ul class="direct-list">
                         <li class="direct-item">
                             <i class="fa fa-music direct-icon"></i>
-                            <a href="{{ route('product') }}" class="text-decoration-none direct-link-1"> Manage
-                                Music</a>
+                            <a href="{{ route('product') }}" class="text-decoration-none direct-link-1"> Manage Music</a>
                         </li>
                         <li class="direct-item">
                             <i class="fas fa-user-plus direct-icon"></i>
-                            <a href="{{ route('user.index') }}" class="text-decoration-none direct-link-2"> Manage
-                                User</a>
+                            <a href="{{ route('user.index') }}" class="text-decoration-none direct-link-2"> Manage User</a>
                         </li>
                         <li class="direct-item">
                             <i class="fas fa-id-card-alt  direct-icon"></i>
@@ -95,20 +92,16 @@
         </div>
         <div class="col-lg-10" style="padding-left: 0px; padding-right:0;  height: 1000px">
 
-            <div class="align-items-center py-3 top-bar"
-                style="background: linear-gradient(80deg,rgb(45,3,43),rgb(25,0,1) ); height: 70px; top:0;  position: sticky; left:cacl(2*100/12); width:100%; z-index: 10;">
+            <div class="align-items-center py-3 top-bar" style="background: linear-gradient(80deg,rgb(45,3,43),rgb(25,0,1) ); height: 70px; top:0;  position: sticky; left:cacl(2*100/12); width:100%; z-index: 10;">
                 <div class="col-lg-6 col-6 text-left">
                     <form action="" style="width: 40%;">
                         <div class="input-group" style="border-radius: 50%">
-                            <div class="input-group-append"
-                                style="background-color:#3e2744; border-top-left-radius: 50%; border-bottom-left-radius: 50%;">
+                            <div class="input-group-append" style="background-color:#3e2744; border-top-left-radius: 50%; border-bottom-left-radius: 50%;">
                                 <span class="input-group-text bg-transparent " style="border-style:none;">
                                     <i class="fa fa-search" style=" color:white;"></i>
                                 </span>
                             </div>
-                            <input type="text" class="form-control"
-                                style="border-top-right-radius: 20px;  border-style:none; border-bottom-right-radius: 20px;"
-                                placeholder="Search for products">
+                            <input type="text" class="form-control" style="border-top-right-radius: 20px;  border-style:none; border-bottom-right-radius: 20px;" placeholder="Search for products">
                         </div>
                     </form>
                 </div>
@@ -139,74 +132,36 @@
                 </div>
             </div>
 
-          
+
             <div class=" mt-0" style="padding-left: 0px; ">
                 <div class=" offer pt-5">
                     <div class="pl-5 m-3 mb-4 ">
-                        <i class="fa fa-music direct-icon" style='font-size:36px'> Manage Music</i>
+                        <i class="fa fa-group direct-icon" style='font-size:36px'> ADMIN </i>
                         <h2 class="new-music-title mb-0"></h2>
 
                         <div style="display: flex; justify-content: flex-end; margin: 10px 50px 20px 0;">
-                            
-                            <a href="" class="btn btn-outline-primary py-md-2 px-md-3"
-                                style="background-color: black; ">add new</a>
-                            
+                            <a href="" class="btn btn-outline-primary py-md-2 px-md-3" style="background-color: black; ">add new</a>
                         </div>
                     </div>
-                   
-                        
-                   
-                    @foreach ($products as $webproduct)
-                    <table id="customers">
-                        <tr>
-                          <th>name</th>
-                          <th>audio</th>
-                          <th>artist</th>
-                          <th>category</th>
-                          <th>playlist</th>
-                        </tr>
-                        <tr>
-                          <td>{{$webproduct->name}}</td>
-                          <td>{{$webproduct->audio}}</td>
-                          <td>{{$webproduct->artist}}</td>
-                          <td>{{$webproduct->category}}</td>
-                          <td>{{$webproduct->playlist}}</td>
-                          
-                        </tr>
-                        
-                        
-                        </tr>
-                      </table>
-                      
-                    @endforeach
-                    
-                </div>
-            </div>
-        </div>
+                    <div class="nav-section header-sticky" style="margin-left: 40px; margin-right: 40px; background-color:black; color:white;">
+                        <div class="header-nav-section">
+                            <div class="container">
+                                
+                            </div>
+                        </div>
+                    </div>
 
     </div>
-
+    @yield('admin')
 
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
 
-    <!-- JavaScript Libraries -->
-    <script src=" {{ asset('https://code.jquery.com/jquery-3.4.1.min.js') }}"></script>
-    <script src="{{ asset('https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js ') }}"></script>
-    <script src="{{ asset('lib/easing/easing.min.js') }}"></script>
-    <script src="{{ asset('lib/owlcarousel/owl.carousel.min.js') }}"></script>
-
-    <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="{{ asset('js/main.js') }}"></script>
+    @yield('myjs')
 
 
 </body>
 
 </html>
-

@@ -33,7 +33,7 @@ body {
   padding: 8px;
 }
 
-#customers tr:nth-child(even){background-color: #f2f2f2;}
+#customers tr:nth-child(even){background-color: #181515;}
 
 #customers tr:hover {background-color: #ddd;}
 
@@ -44,7 +44,6 @@ body {
   background-color: #04AA6D;
   color: white;
 }
-
 
 #content #Click{
   width: 20px;
@@ -1064,7 +1063,7 @@ legend {
   }
 }
 
-progress {
+.progress, .progress-demo {
   vertical-align: baseline;
 }
 
@@ -5700,7 +5699,7 @@ a.badge-dark:focus, a.badge-dark.focus {
   }
 }
 
-.progress {
+.progress , .progress-demo {
   display: flex;
   height: 1rem;
   overflow: hidden;

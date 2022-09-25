@@ -158,48 +158,25 @@
                             </div>
                         </div>
                     </div>
-                    <div class="nav-section header-sticky" --}}
-                        style="margin-left: 40px; margin-right: 40px; background-color:black; color:white;">
-                            <div class="header-nav-section">
-                                <div class="container">
-                                    <ul class="nav menu-nav clone-main-menu"
-                                        style=" color:white; display:flex; justify-content: space-between; align-items: center;"
-                                        data-menuname="Sale Info">
-                                        <li class="menu-item , fa fa-gift"><a href="#" class="link-term"
-                                                style='font-size:24px'>Package_id</a></li>
-                                        <li class="menu-item , fa fa-money"><a href="#" class="link-term"
-                                                style='font-size:24px'>Price</a></li>
-                                        <li class="menu-item , fa fa-headphones"><a
-                                                style='font-size:24px'>playlist_id</a></li>
-                                        <li class="menu-item , fa fa-hourglass"><a href="#" class="link-term"
-                                                style='font-size:24px'>Duration</a></li>
-                                        <li class="menu-item"><a href="#" class="link-term"
-                                                style='font-size:24px'>Action</a></li>
-                                    </ul>
-                                </div>
-                            </div>
+                    
                     @foreach ($order as $weborder)
-                        <div class="nav-section header-sticky"
-                            style="margin-left: 40px; margin-right: 40px; background-color:black; color:white;">
-                            <div class="header-nav-section">
-                                <div class="container">
-                                    <ul class="nav menu-nav clone-main-menu"
-                                        style=" color:white; display:flex; justify-content: space-between; align-items: center;"
-                                        data-menuname="Sale Info">
-                                        <li class="menu-item"><a href="#" class="link-term"
-                                                style='font-size:24px'>{{ $weborder->package_id }}</a></li>
-                                        <li class="menu-item"><a href="#" class="link-term"
-                                                style='font-size:24px'>{{ $weborder->price }}</a></li>
-                                        <li class="menu-item"><a href="#" class="link-term"
-                                                style='font-size:24px'>{{ $weborder->playlist_id }}</a></li>
-                                        <li class="menu-item"><a href="#" class="link-term"
-                                                style='font-size:24px'>{{ $weborder->Duration }}</a></li>
-
-
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                    <table id="customers">
+                        <tr>
+                          <th>package_id</th>
+                          <th>price</th>
+                          <th>playlist_id</th>
+                          <th>Duration</th>
+                        </tr>
+                        <tr>
+                          <td>{{$weborder->package_id}}</td>
+                          <td>{{$weborder->price}}</td>
+                          <td>{{$weborder->playlist_id}}</td>
+                          <td>{{$weborder->Duration}}</td>
+                        </tr>
+                        
+                        
+                        </tr>
+                      </table> 
                     @endforeach
 
                 </div>

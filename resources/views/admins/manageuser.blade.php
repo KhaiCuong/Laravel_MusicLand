@@ -72,8 +72,7 @@
                     <ul class="direct-list">
                         <li class="direct-item">
                             <i class="fa fa-music direct-icon"></i>
-                            <a href="{{ route('product') }}" class="text-decoration-none direct-link-1"> Manage
-                                Music</a>
+                            <a href="{{ route('admin') }}" class="text-decoration-none direct-link-1"> Manage Music</a>
                         </li>
                         <li class="direct-item">
                             <i class="fas fa-user-plus direct-icon"></i>
@@ -139,50 +138,82 @@
                 </div>
             </div>
 
-          
+
             <div class=" mt-0" style="padding-left: 0px; ">
                 <div class=" offer pt-5">
                     <div class="pl-5 m-3 mb-4 ">
-                        <i class="fa fa-music direct-icon" style='font-size:36px'> Manage Music</i>
+                        <i class="fa fa-music direct-icon" style='font-size:36px'> Manage User</i>
                         <h2 class="new-music-title mb-0"></h2>
 
                         <div style="display: flex; justify-content: flex-end; margin: 10px 50px 20px 0;">
-                            
                             <a href="" class="btn btn-outline-primary py-md-2 px-md-3"
                                 style="background-color: black; ">add new</a>
-                            
                         </div>
+
+
+
+
                     </div>
-                   
-                        
-                   
-                    @foreach ($products as $webproduct)
-                    <table id="customers">
-                        <tr>
-                          <th>name</th>
-                          <th>audio</th>
-                          <th>artist</th>
-                          <th>category</th>
-                          <th>playlist</th>
-                        </tr>
-                        <tr>
-                          <td>{{$webproduct->name}}</td>
-                          <td>{{$webproduct->audio}}</td>
-                          <td>{{$webproduct->artist}}</td>
-                          <td>{{$webproduct->category}}</td>
-                          <td>{{$webproduct->playlist}}</td>
-                          
-                        </tr>
-                        
-                        
-                        </tr>
-                      </table>
-                      
-                    @endforeach
-                    
                 </div>
             </div>
+            {{-- <table border="1">
+                        <thead>
+                            @foreach ($user as $users)
+                                <tr>
+                                    <th>{{$users->user_id}}</th>
+                                    <th>{{$users->name}}</th>
+                                    <th>{{$users->email}}</th>
+                                    <th>{{$users->mem_card}}</th>
+                                    <th>{{$users->credit_card}}</th>
+                            @endforeach --}}
+            @foreach ($user as $User)
+                {{-- <div class="nav-section header-sticky"
+                    style="margin-left: 40px; margin-right: 40px; background-color:black; color:white;">
+                    <div class="header-nav-section">
+                        <div class="container">
+                            <ul class="nav menu-nav clone-main-menu"
+                                style=" color:white; display:flex; justify-content: space-between; align-items: center;"
+                                data-menuname="Sale Info">
+                                <li class="menu-item"><a href="#" class="link-term"
+                                        style='font-size:24px'>{{ $User->id }}</a></li>
+                                <li class="menu-item"><a href="#" class="link-term"
+                                        style='font-size:24px'>{{ $User->email }}</a></li>
+                                <li class="menu-item"><a href="#" class="link-term"
+                                        style='font-size:24px'>{{ $User->password }}</a></li>
+                                <li class="menu-item"><a href="#" class="link-term"
+                                        style='font-size:24px'>{{ $User->name }}</a></li>
+                                <li class="menu-item"><a href="#" class="link-term"
+                                        style='font-size:24px'>{{ $User->credit_card }}</a></li>
+                                <li class="menu-item"><a href="#" class="link-term"
+                                        style='font-size:24px'>{{ $User->mem_card }}</a></li>
+                                <li class="menu-item"><a href="#" class="link-term"
+                                        style='font-size:24px'>Action</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> --}}
+                <table id="customers">
+                    <tr>
+                      <th>id</th>
+                      <th>email</th>
+                      <th>name</th>
+                      <th>credit card</th>
+                    </tr>
+                    <tr>
+                      <td>{{$User->user_id}}</td>
+                      <td>{{$User->email}}</td>
+                      <td>{{$User->Name}}</td>
+                      <td>{{$User->credit_card}}</td>
+                    </tr>
+                    
+                    
+                    </tr>
+                  </table>
+            @endforeach
+
         </div>
+    </div>
+    </div>
 
     </div>
 
@@ -209,4 +240,3 @@
 </body>
 
 </html>
-

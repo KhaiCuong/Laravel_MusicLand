@@ -5,10 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Product extends Model
+class Gallery extends Model
 {
     use HasFactory;
-
-    protected $fillable=['name', 'audio' ,'artist','category','playlist','slug'];
-
 }
