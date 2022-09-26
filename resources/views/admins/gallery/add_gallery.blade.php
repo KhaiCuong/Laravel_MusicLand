@@ -3,8 +3,9 @@
     <div class="panel-body">
         
         <input type="hidden" value="" name="pro_id" class="pro_id">
-        <form action="{{route('admins.product')}}" method="POST" enctype="multipart/form-data">
+        <form action="{{route('add_gallery')}}" method="POST" enctype="multipart/form-data">
             @csrf
+            @method('PUT')
         <div class="row">
             <div class="col-md-3" align="right">
 
