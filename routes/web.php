@@ -9,7 +9,7 @@ use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\UserController;
 
 use App\Http\Controllers\HomeController;
-
+use App\Http\Controllers\MemcardController;
 use App\Http\Controllers\RegisterController;
 
 /*
@@ -41,12 +41,15 @@ Route::get('/admin', function () {
     return view('admins.admin');
  })->name('admin');
 
-
-
-
 Route::get('/l', function () {
     return view('mylibrary');
 })->name('mylibrary');
+
+Route::get('/extend', function () {
+    return view('memcard.extend');
+ })->name('extend');
+
+Route::get('/mycard',[MemcardController::class, 'mycard'])->name('mycard');
 
 Route::get('/p', function () {
     return view('playlist');

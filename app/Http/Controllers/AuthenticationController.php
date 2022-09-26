@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
-use App\Http\Controllers\Session;
+use Session;
 use Illuminate\Http\Request;
+use App\Models\User;
+
 use Sentinel;
 
 class AuthenticationController extends Controller
@@ -32,6 +34,10 @@ class AuthenticationController extends Controller
             'password' => 'required'
         ]);
         $credentials = $request->only('email','password');
+
+     
+        Session::put('email', $credentials['email']);
+
         if (Auth::attempt($credentials)) {
 
             // $role = Sentinel::getRoleRepository()->findBySlug('admin');
@@ -61,9 +67,12 @@ class AuthenticationController extends Controller
     }
 
     public function logout() {
-;
+
         Auth::logout();
         return redirect()->route('home');
     }
+
+
+ 
 
 }

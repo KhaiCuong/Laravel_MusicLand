@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 
+use Illuminate\Support\Facades\Hash;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -42,6 +43,8 @@ class RegisterController extends Controller
     {
         $user = $request->all();
         $p = new User($user);
+        $p->password =  Hash::make($request->password);
+
         $p->save();
     
         return redirect()->route('home');

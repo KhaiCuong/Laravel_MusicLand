@@ -549,6 +549,43 @@ menu
 
  /* Cuong css */
 
+ .my-memcard {
+  margin: 25px;
+  border-radius: 20px;
+  
+ }
+
+ .card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0 !important;
+ }
+
+ #platinum {
+  background-image: url("../img/dimond.jpg");
+  background-size: cover;
+ }
+ #gold {
+  background-image: url("../img/gold.jpg");
+  background-size: cover;
+ }
+
+ #silver {
+  background-image: url("../img/silver.jpg");
+  background-size: cover;
+ }
+ 
+ .card-btn {
+  width: 80%;
+  padding: 20px 0 !important;
+  text-align: center;
+  background-color: rgb(103, 18, 86) !important;
+  border-radius: 30px !important;
+  color: white !important;
+ }
+
 .avt {
 
   width: 300px; 
