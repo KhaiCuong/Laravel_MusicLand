@@ -156,49 +156,17 @@
                     </div>
                 </div>
             </div>
-            {{-- <table border="1">
-                        <thead>
-                            @foreach ($user as $users)
-                                <tr>
-                                    <th>{{$users->user_id}}</th>
-                                    <th>{{$users->name}}</th>
-                                    <th>{{$users->email}}</th>
-                                    <th>{{$users->mem_card}}</th>
-                                    <th>{{$users->credit_card}}</th>
-                            @endforeach --}}
-            @foreach ($user as $User)
-                {{-- <div class="nav-section header-sticky"
-                    style="margin-left: 40px; margin-right: 40px; background-color:black; color:white;">
-                    <div class="header-nav-section">
-                        <div class="container">
-                            <ul class="nav menu-nav clone-main-menu"
-                                style=" color:white; display:flex; justify-content: space-between; align-items: center;"
-                                data-menuname="Sale Info">
-                                <li class="menu-item"><a href="#" class="link-term"
-                                        style='font-size:24px'>{{ $User->id }}</a></li>
-                                <li class="menu-item"><a href="#" class="link-term"
-                                        style='font-size:24px'>{{ $User->email }}</a></li>
-                                <li class="menu-item"><a href="#" class="link-term"
-                                        style='font-size:24px'>{{ $User->password }}</a></li>
-                                <li class="menu-item"><a href="#" class="link-term"
-                                        style='font-size:24px'>{{ $User->name }}</a></li>
-                                <li class="menu-item"><a href="#" class="link-term"
-                                        style='font-size:24px'>{{ $User->credit_card }}</a></li>
-                                <li class="menu-item"><a href="#" class="link-term"
-                                        style='font-size:24px'>{{ $User->mem_card }}</a></li>
-                                <li class="menu-item"><a href="#" class="link-term"
-                                        style='font-size:24px'>Action</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div> --}}
-                <table id="customers">
+            <table id="customers">
                     <tr>
                       <th>id</th>
                       <th>email</th>
                       <th>name</th>
                       <th>credit card</th>
                     </tr>
+        
+            @foreach ($user as $User)
+   
+             
                     <tr>
                       <td>{{$User->user_id}}</td>
                       <td>{{$User->email}}</td>
@@ -206,10 +174,9 @@
                       <td>{{$User->credit_card}}</td>
                     </tr>
                     
-                    
-                    </tr>
-                  </table>
+               
             @endforeach
+            </table>
 
         </div>
     </div>

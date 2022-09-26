@@ -158,8 +158,6 @@
                             </div>
                         </div>
                     </div>
-                    
-                    @foreach ($order as $weborder)
                     <table id="customers">
                         <tr>
                           <th>package_id</th>
@@ -167,6 +165,8 @@
                           <th>playlist_id</th>
                           <th>Duration</th>
                         </tr>
+                    @foreach ($order as $weborder)
+                   
                         <tr>
                           <td>{{$weborder->package_id}}</td>
                           <td>{{$weborder->price}}</td>
@@ -175,9 +175,10 @@
                         </tr>
                         
                         
-                        </tr>
-                      </table> 
+                     
+                    
                     @endforeach
+                    </table> 
 
                 </div>
 

@@ -27,7 +27,7 @@ class ProductController extends Controller
      */
 
 
-    public function insert_audio($products)
+    public function insert_audio()
     {
       
     }
@@ -38,7 +38,7 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function add_audio(Request $request ,$products)
+    public function add_audio()
     {
         
         

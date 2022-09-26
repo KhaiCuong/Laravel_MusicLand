@@ -13,8 +13,7 @@
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -95,20 +94,16 @@
         </div>
         <div class="col-lg-10" style="padding-left: 0px; padding-right:0;  height: 1000px">
 
-            <div class="align-items-center py-3 top-bar"
-                style="background: linear-gradient(80deg,rgb(45,3,43),rgb(25,0,1) ); height: 70px; top:0;  position: sticky; left:cacl(2*100/12); width:100%; z-index: 10;">
+            <div class="align-items-center py-3 top-bar" style="background: linear-gradient(80deg,rgb(45,3,43),rgb(25,0,1) ); height: 70px; top:0;  position: sticky; left:cacl(2*100/12); width:100%; z-index: 10;">
                 <div class="col-lg-6 col-6 text-left">
                     <form action="" style="width: 40%;">
                         <div class="input-group" style="border-radius: 50%">
-                            <div class="input-group-append"
-                                style="background-color:#3e2744; border-top-left-radius: 50%; border-bottom-left-radius: 50%;">
+                            <div class="input-group-append" style="background-color:#3e2744; border-top-left-radius: 50%; border-bottom-left-radius: 50%;">
                                 <span class="input-group-text bg-transparent " style="border-style:none;">
                                     <i class="fa fa-search" style=" color:white;"></i>
                                 </span>
                             </div>
-                            <input type="text" class="form-control"
-                                style="border-top-right-radius: 20px;  border-style:none; border-bottom-right-radius: 20px;"
-                                placeholder="Search for products">
+                            <input type="text" class="form-control" style="border-top-right-radius: 20px;  border-style:none; border-bottom-right-radius: 20px;" placeholder="Search for products">
                         </div>
                     </form>
                 </div>
@@ -138,8 +133,6 @@
                     </div>
                 </div>
             </div>
-
-            @foreach ($products as $webproduct)
             <div class=" mt-0" style="padding-left: 0px; ">
                 <div class=" offer pt-5">
                     <div class="pl-5 m-3 mb-4 ">
@@ -148,49 +141,46 @@
 
                         <div style="display: flex; justify-content: flex-end; margin: 10px 50px 20px 0;">
 
-                            <a href="" class="btn btn-outline-primary py-md-2 px-md-3"
-                                
-                            style="background-color: black; "><input type="file" class="form-control" name="file[]" accept="audio/*">add new</a>
-                            
+                            <a href="" class="btn btn-outline-primary py-md-2 px-md-3" style="background-color: black; "><input type="file" class="form-control" name="file[]" accept="audio/*">add new</a>
+
 
                         </div>
                     </div>
 
 
 
-                    
-                        <table id="customers">
-                            <tr>
-                                <th>name</th>
-                                <th>audio</th>
-                                <th>artist</th>
-                                <th>category</th>
-                                <th>playlist</th>
-                            </tr>
-                            <tr>
-                                <td>{{ $webproduct->name }}</td>
-                                <td class="mt-2 name-song"> {{ $webproduct->audio }} </td>
-                                <td>{{ $webproduct->artist }}</td>
-                                <td>{{ $webproduct->category }}</td>
-                                <td>{{ $webproduct->playlist }}</td>
 
-                            </tr>
+                    <table id="customers">
+                    <tr>
+                            <th>name</th>
+                            <th>audio</th>
+                            <th>artist</th>
+                            <th>category</th>
+                            <th>playlist</th>
+                        </tr>
+                        @foreach ($products as $webproduct)
+
+                  
+                        <tr>
+                            <td>{{ $webproduct->name }}</td>
+                            <td class="mt-2 name-song"> {{ $webproduct->audio }} </td>
+                            <td>{{ $webproduct->artist }}</td>
+                            <td>{{ $webproduct->category }}</td>
+                            <td>{{ $webproduct->playlist }}</td>
+
+                        </tr>
 
 
-                            </tr>
-                        </table>
-                    @endforeach
+                        @endforeach
+
+                    </table>
 
                 </div>
             </div>
         </div>
 
     </div>
-    @section('musicbox')
-        
-    
-    
-@endsection
+
 
 
     <!-- Back to Top -->
