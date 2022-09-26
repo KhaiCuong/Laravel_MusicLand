@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthenticationController;
 
 use App\Http\Controller\HomeControllers;
+use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\UserController;
@@ -64,10 +65,6 @@ Route::post('/login', [AuthenticationController::class, 'processLogin'])->name('
 
 
 Route::resource('register', RegisterController::class);
-
-
-
-
 
 
 

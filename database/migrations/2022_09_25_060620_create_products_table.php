@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('name')->nullable();
             $table->String('audio')->nullable();
-            $table->string('photo')->nullable();
-            $table->String('artist')->nullable();
+            $table->string('artist')->nullable();
+            $table->String('category')->nullable();
             $table->String('playlist')->nullable();
             $table->string('slug')->nullable();
             $table->timestamps();
@@ -32,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('products');
+        Schema::dropIfExists('product');
     }
 };

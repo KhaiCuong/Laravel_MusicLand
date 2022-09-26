@@ -25,9 +25,11 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+
+
+    public function insert_audio($products)
     {
-        //
+      
     }
 
     /**
@@ -36,35 +38,21 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function add_audio(Request $request ,$products)
     {
-        if ($request->hasFile('photo')) {
-            $file = $request->file('photo');
-            $extension = $file->getClientOriginalExtension();
-            if ($extension != 'jpg' && $extension != 'png' && $extension != 'jpeg') {
-                return redirect()->route('admins.product.index')->with('Error', 'Ban chi dinh sai duong dan');
-            }
-            $imageName = $file->getClientOriginalName();
-            $file->move("img", $imageName);
-        } else {
-            $imageName = null;
-        }
-        $p = new Product();
-        $p->photo = $imageName;
-        $p->slug =($p->name);
-        $p->save();
-        return redirect()->route('admins.product.index');
+        
+        
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int  $products
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+        
     }
 
     /**

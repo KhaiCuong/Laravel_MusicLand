@@ -139,7 +139,7 @@
                 </div>
             </div>
 
-
+            @foreach ($products as $webproduct)
             <div class=" mt-0" style="padding-left: 0px; ">
                 <div class=" offer pt-5">
                     <div class="pl-5 m-3 mb-4 ">
@@ -147,89 +147,50 @@
                         <h2 class="new-music-title mb-0"></h2>
 
                         <div style="display: flex; justify-content: flex-end; margin: 10px 50px 20px 0;">
+
                             <a href="" class="btn btn-outline-primary py-md-2 px-md-3"
-                                style="background-color: black; ">add new</a>
+                                
+                            style="background-color: black; "><input type="file" class="form-control" name="file[]" accept="audio/*">add new</a>
+                            
+
                         </div>
                     </div>
-                    <div class="nav-section header-sticky" --}}
-                        style="margin-left: 40px; margin-right: 40px; background-color:black; color:white;">
-                            <div class="header-nav-section">
-                                <div class="container">
-                                    <ul class="nav menu-nav clone-main-menu"
-                                        style=" color:white; display:flex; justify-content: space-between; align-items: center;"
-                                        data-menuname="Sale Info">
-                                        <li class="menu-item"><a href="#" class="link-term"
-                                                style='font-size:24px'>Name</a></li>
-                                        <li class="menu-item"><a href="#" class="link-term"
-                                                style='font-size:24px'>Audio</a></li>
-                                        <li class="box"><a
-                                                style='font-size:24px'>Photo</a>
-                                            </li>
-                                        <li class="menu-item"><a href="#" class="link-term"
-                                                style='font-size:24px'>Artist</a></li>
-                                        <li class="menu-item"><a href="#" class="link-term"
-                                                style='font-size:24px'>Action</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                    @foreach ($products as $webproduct)
-                        <div class="nav-section header-sticky" --}}
-                        style="margin-left: 40px; margin-right: 40px; background-color:black; color:white;">
-                            <div class="header-nav-section">
-                                <div class="container">
-                                    <ul class="nav menu-nav clone-main-menu"
-                                        style=" color:white; display:flex; justify-content: space-between; align-items: center;"
-                                        data-menuname="Sale Info">
-                                        <li class="menu-item"><a href="#" class="link-term"
-                                                style='font-size:24px'>{{ $webproduct->name }}</a></li>
-                                        <li class="menu-item"><a href="#" class="link-term"
-                                                style='font-size:24px'>{{ $webproduct->audio }}</a></li>
-                                        <li class="box"><a
-                                                style='font-size:24px'>{{ $webproduct->photo }}</a>
-                                            </li>
-                                        <li class="menu-item"><a href="#" class="link-term"
-                                                style='font-size:24px'>{{ $webproduct->artist }}</a></li>
-                                        <li class="menu-item"><a href="#" class="link-term"
-                                                style='font-size:24px'>Action</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                         </div>
-                        {{-- <table border="1">
+
+
+
+                    
+                        <table id="customers">
                             <tr>
                                 <th>name</th>
                                 <th>audio</th>
-                                <th>photo</th>
+                                <th>artist</th>
+                                <th>category</th>
+                                <th>playlist</th>
                             </tr>
                             <tr>
-                                <td>{{ $webproduct -> name}}</td>
-                                <td>{{ $webproduct -> audio}}</td>
-                                <td>
-                                    <img src="{{ asset('img').'/'.$webproduct->photo }}" style="display:flex ; width:100px ; height:auto;">
-                                    <{{ $webproduct -> photo}}>
-                                </td>
-                                <td>{{ $webproduct -> artist}}</td>
+                                <td>{{ $webproduct->name }}</td>
+                                <td class="mt-2 name-song"> {{ $webproduct->audio }} </td>
+                                <td>{{ $webproduct->artist }}</td>
+                                <td>{{ $webproduct->category }}</td>
+                                <td>{{ $webproduct->playlist }}</td>
+
                             </tr>
-                            
-                        </table> --}}
-                        {{-- <div class="col-md-6">
-                            <div class="box">
-
-                                <h6 style="display: flex; justify-content: space-between;">{{ $webproduct->name }}</h6>
-                                <h6>{{ $webproduct->audio }}</h6>
-
-                                <img src="{{ asset('img') . '/' . $webproduct->photo }}">
 
 
-                            </div>
-                        </div> --}}
+                            </tr>
+                        </table>
                     @endforeach
+
                 </div>
             </div>
         </div>
 
     </div>
-
+    @section('musicbox')
+        
+    
+    
+@endsection
 
 
     <!-- Back to Top -->
