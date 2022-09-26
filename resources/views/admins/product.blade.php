@@ -139,7 +139,7 @@
                 </div>
             </div>
 
-          
+            @foreach ($products as $webproduct)
             <div class=" mt-0" style="padding-left: 0px; ">
                 <div class=" offer pt-5">
                     <div class="pl-5 m-3 mb-4 ">
@@ -147,45 +147,50 @@
                         <h2 class="new-music-title mb-0"></h2>
 
                         <div style="display: flex; justify-content: flex-end; margin: 10px 50px 20px 0;">
-                            
+
                             <a href="" class="btn btn-outline-primary py-md-2 px-md-3"
-                                style="background-color: black; ">add new</a>
+                                
+                            style="background-color: black; "><input type="file" class="form-control" name="file[]" accept="audio/*">add new</a>
                             
+
                         </div>
                     </div>
-                   
-                        
-                   
-                    @foreach ($products as $webproduct)
-                    <table id="customers">
-                        <tr>
-                          <th>name</th>
-                          <th>audio</th>
-                          <th>artist</th>
-                          <th>category</th>
-                          <th>playlist</th>
-                        </tr>
-                        <tr>
-                          <td>{{$webproduct->name}}</td>
-                          <td>{{$webproduct->audio}}</td>
-                          <td>{{$webproduct->artist}}</td>
-                          <td>{{$webproduct->category}}</td>
-                          <td>{{$webproduct->playlist}}</td>
-                          
-                        </tr>
-                        
-                        
-                        </tr>
-                      </table>
-                      
-                    @endforeach
+
+
+
                     
+                        <table id="customers">
+                            <tr>
+                                <th>name</th>
+                                <th>audio</th>
+                                <th>artist</th>
+                                <th>category</th>
+                                <th>playlist</th>
+                            </tr>
+                            <tr>
+                                <td>{{ $webproduct->name }}</td>
+                                <td class="mt-2 name-song"> {{ $webproduct->audio }} </td>
+                                <td>{{ $webproduct->artist }}</td>
+                                <td>{{ $webproduct->category }}</td>
+                                <td>{{ $webproduct->playlist }}</td>
+
+                            </tr>
+
+
+                            </tr>
+                        </table>
+                    @endforeach
+
                 </div>
             </div>
         </div>
 
     </div>
-
+    @section('musicbox')
+        
+    
+    
+@endsection
 
 
     <!-- Back to Top -->
@@ -209,4 +214,3 @@
 </body>
 
 </html>
-

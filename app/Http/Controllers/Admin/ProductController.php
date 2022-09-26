@@ -25,9 +25,11 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+
+
+    public function insert_audio($products)
     {
-        //
+      
     }
 
     /**
@@ -36,21 +38,45 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function insert_gallery($products)
+    public function add_audio(Request $request ,$products)
     {
-        
+        $get_audio = $request->file('file');
+        if($get_audio){
+            foreach($get_audio as $audio){}
+            $get_name_audio = $audio->getClientOriginalName();
+            $name_audio = current(explode('.',$get_name_audio));
+            $new_audio = $name_audio.rand(0.99).'.'.$audio->getClientOriginalExtension();
+            $audio->move('public/audio' , $new_audio);
+            $audio = new Audio();
+            $audio->name =
+            $audio->audio =
+            $audio->artist =
+            $audio->category =
+            $audio->save();
+        }
         
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int  $products
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request)
     {
-        //
+        $product_id = $request->products;
+        $audio = Audio::where('product_id',$product_id)->get();
+        $audio_count = $audio->count();
+        $output =  '<table id="customers">
+        <tr>
+            <th>name</th>
+            <th>audio</th>
+            <th>artist</th>
+            <th>category</th>
+            <th>playlist</th>
+        </tr>
+        </table>';
     }
 
     /**

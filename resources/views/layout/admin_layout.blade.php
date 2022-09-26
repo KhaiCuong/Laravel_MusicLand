@@ -152,6 +152,33 @@
                     </div>
 
     </div>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            load_gallery();
+            
+            function load_gallery(){
+                var pro_id = $('.pro_id').val();
+                // alert(pro_id);
+                $.ajax({
+                    ,
+                    method:"POST",
+                    data:{pro_id:pro_id},
+                    success:function(data){
+                        $('#gallery_load').html(data);
+                    }
+                })
+            }
+            $('#file').change(function(){
+                var error = '';
+                var files = $('#file')[0].files;
+                if(file.size > 200000000){
+                    error++'<p>file</p>'
+                }
+            }
+            
+            
+        });
+    </script>
     @yield('admin')
 
 

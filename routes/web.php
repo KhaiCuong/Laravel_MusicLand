@@ -62,7 +62,7 @@ Route::post('/login', [AuthenticationController::class, 'processLogin'])->name('
 
 
 Route::resource('register', RegisterController::class);
-Route::post('insert-gallery/{pro_id}' , [ProductController::class]);
-
+Route::get('/add_gallery', [GalleryController::class,'index'])->name('add_gallery');
+Route::get('/select_gallery', [GalleryController::class,'index'])->name('select_gallery');
 
 
